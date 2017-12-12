@@ -1,7 +1,13 @@
 <?php
-    include('layout/header.php');
+    session_start();
+    if(!isset($_SESSION['quantri'])) {
+        echo "<script> window.location='dang-nhap/dang-nhap.php'</script>";
+    } else {
 
- ?>
+
+        include('layout/header.php');
+        include('../inc/ketnoi.php');
+        ?>
             <div class="row wrapper border-bottom white-bg page-heading">
                 <div class="col-lg-10">
                     <ol class="breadcrumb" style="margin-top: 10px;margin-bottom: -10px;">
@@ -38,13 +44,24 @@
                                 </tr>
                             </thead>
                             <tbody>
+                            <?php 
+                                $laydm = "SELECT * FROM danh_muc";
+                                $qr = mysqli_query($ketnoi, $laydm);
 
+                                while($dm = mysqli_fetch_array($qr)) {
+
+                             ?>
                                 <tr class="gradeX">
-                                    <th>Mã Danh Mục</th>
-                                    <th>Tên Danh Mục</th>
-                                    <th>Mô Tả Chi Tiết</th>
-                                    <th>Sửa / Xóa</th>
+                                    <th><?php echo $dm['id']; ?></th>
+                                    <th><?php echo $dm['TenDanhMuc']; ?></th>
+                                    <th><?php echo $dm['MoTa']; ?></th>
+                                    <th><a href="">Sửa</a> / <a href="">Xóa</a></th>
                                 </tr>
+                                
+                            <?php 
+                                }
+
+                             ?>
 
                             </tbody>
                         </table>
@@ -58,10 +75,10 @@
         <!-- </div> -->
        <!--  </di -->
 
-    <!-- Page-Level Scripts -->
-    <script src="js/jquery.jeditable.mini.js"></script>
-    <script>
-        $(document).ready(function() {
+        <!-- Page-Leve                      l Scripts -->
+        <script src="js/jquery.jeditable.mini.js"></script>
+        <script>
+            $(document).ready(function() {
             $('.dataTables-example').dataTable({
                 responsive: true,
                 "dom": 'T<"clear">lfrtip',
@@ -107,5 +124,6 @@
     }
 </style>
 <?php
+    }
     include('layout/footer.php');
  ?>

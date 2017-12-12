@@ -37,21 +37,21 @@
                                 <div class="form-group">
                                     <label class="col-sm-2 control-label">Mã Nhân Viên</label>
                                     <div class="col-sm-10">
-                                        <input class="form-control" type="text" name="manhanvien">
+                                        <input id="manhanvien" class="form-control" type="text" name="manhanvien">
                                     </div>
                                 </div>
                                 <div class="hr-line-dashed"></div>
                                 <div class="form-group">
                                     <label class="col-sm-2 control-label">Tên Đăng Nhập</label>
                                     <div class="col-sm-10">
-                                        <input class="form-control" type="text" name="tendangnhap">
+                                        <input id="tendangnhap" class="form-control" type="text" name="tendangnhap">
                                     </div>
                                 </div>
                                 <div class="hr-line-dashed"></div>
                                 <div class="form-group">
                                     <label class="col-sm-2 control-label">Mật Khẩu</label>
                                     <div class="col-sm-10">
-                                        <input class="form-control" name="password" type="password">
+                                        <input id="password" class="form-control" name="password" type="password">
                                     </div>
                                 </div>
                                 <div class="hr-line-dashed"></div>
@@ -65,25 +65,25 @@
                                 <div class="form-group">
                                     <label class="col-lg-2 control-label">Tên Nhân Viên</label>
                                     <div class="col-lg-10">
-                                        <input class="form-control" type="text" name="tennhanvien">
+                                        <input id="tennhanvien" class="form-control" type="text" name="tennhanvien">
                                     </div>
                                 </div>
                                 <div class="form-group">
                                     <label class="col-lg-2 control-label">Điện Thoại</label>
                                     <div class="col-lg-10">
-                                        <input class="form-control" type="text" name="dienthoai">
+                                        <input id="dienthoai" class="form-control" type="text" name="dienthoai">
                                     </div>
                                 </div>
                                 <div class="form-group">
                                     <label class="col-lg-2 control-label">Email</label>
                                     <div class="col-lg-10">
-                                        <input class="form-control" type="email" name="email">
+                                        <input id="email" class="form-control" type="email" name="email">
                                     </div>
                                 </div>
                                 <div class="form-group">
                                     <label class="col-lg-2 control-label">Ngày Sinh</label>
                                     <div class="col-lg-10">
-                                        <input class="form-control" type="date" name="ngaysinh">
+                                        <input id="ngaysinh" class="form-control" type="date" name="ngaysinh">
                                     </div>
                                 </div>
                                 <div class="hr-line-dashed"></div>
@@ -91,9 +91,8 @@
                                     <label class="col-sm-2 control-label">Giới Tính</label>
                                     <div class="col-sm-10">
                                         <select class="form-control m-b" name="gioitinh">
-                                            <option>Vui Lòng chọn giới tính</option>
-                                            <option>Nam</option>
-                                            <option>Nữ</option>
+                                            <option value="nam">Nam</option>
+                                            <option value="nu">Nữ</option>
                                         </select>
                                     </div>
                                 </div>
@@ -102,9 +101,10 @@
                                 <div class="form-group">
                                     <div class="col-sm-4 col-sm-offset-2">
                                         <a href="<?php echo $url_admin ?>nhan-vien.php" class="btn btn-default ntn-huybo">Hủy Bỏ</a>
-                                        <button class="btn btn-primary" type="submit" name="ok">Thêm Nhân Viên</button>
+                                        <button id="taotv" class="btn btn-primary" type="submit" name="ok">Thêm Nhân Viên</button>
                                     </div>
                                 </div>
+                                <div style="color: red" class="text-danger" id="ThongBao"></div>
                             </form>
                         </div>
                     </div>
@@ -144,10 +144,39 @@
                             }  else {
                                 echo 'Vui Lòng chọn file ảnh đại diện của bạn !!';
                             }
-
                  ?>
             </div>
         </div>
+        <script>
+            $(document).ready(function(){
+                $('#taotv').click(function(){
+                    manhanvien = $('#manhanvien').val();
+                    tendangnhap = $('#tendangnhap').val();
+                    matkhau = $('#password').val();
+                    tennhanvien = $('#tennhanvien').val();
+                    ngaysinh = $('#ngaysinh').val();
+                    dienthoai = $('#dienthoai').val();
+
+                    Loi =0;
+
+                    //kiểm tra đầy đủ thông tin
+                    if(manhanvien == "" || tendangnhap == "" || matkhau == "" || tennhanvien == "" || ngaysinh == "" ) {
+                        Loi++;
+                        $('#ThongBao').text("Hãy nhập đầy đủ thông tin...");
+                    }
+
+                    //kiểm tra điện thoại có phải là số không
+                    if(isNaN(dienthoai)) {
+                        Loi++;
+                        $("#ThongBao").text("Số điện thoại phải là số!");
+                    }
+
+                    if(Loi!=0) {
+                        return false;
+                    }
+                });
+            });
+        </script>
         <?php
     }
  ?>

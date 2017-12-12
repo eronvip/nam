@@ -1,9 +1,11 @@
 <?php
-    include('layout/header.php');
-    include('../inc/Ketnoi.php');
+    session_start();
     if(!isset($_SESSION['quantri'])) {
         echo "<script> window.location='dang-nhap/dang-nhap.php'</script>";
-    }
+
+    include('layout/header.php');
+    include('../inc/Ketnoi.php');
+
  ?>
  <div class="row wrapper border-bottom white-bg page-heading">
         <div class="col-lg-10">
@@ -92,5 +94,6 @@
             });
         </script>
 <?php
+    }
     include('layout/footer.php');
  ?>
