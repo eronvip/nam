@@ -1,6 +1,11 @@
 <?php
-    include('layout/header.php');
- ?>
+    session_start();
+    if(!isset($_SESSION['quantri'])) {
+        echo "<script> window.location='dang-nhap/dang-nhap.php'</script>";
+    } else {
+        include('layout/header.php');
+        include('../inc/ketnoi.php');
+        ?>
             <div class="row wrapper border-bottom white-bg page-heading">
                 <div class="col-lg-10">
                     <ol class="breadcrumb" style="margin-top: 10px;margin-bottom: -10px;">
@@ -9,7 +14,7 @@
                         </li>
 
                         <li class="active">
-                            <strong>Danh sách thành viên</strong>
+                            <strong>Danh sách Sản Phẩm</strong>
                         </li>
                     </ol>
                 </div>
@@ -25,7 +30,7 @@
 
                         <div class="ibox-content">
                         <div class="">
-                            <a  href="" class="btn btn-primary ">Thêm Nhân Viên Mới</a>
+                            <a  href="pages/them-san-pham.php" class="btn btn-primary ">Thêm Sản Phẩm Mới</a>
                         </div>
                         <table class="table table-striped table-bordered table-hover " id="editable" >
                             <thead>
@@ -33,71 +38,38 @@
                                     <th>Mã SP</th>
                                     <th>Tên SP</th>
                                     <th>Số Lượng</th>
-                                    <th>Ảnh</th>
                                     <th>Giá</th>
                                     <th>Giá Giảm</th>
                                     <th>Trạng Thái</th>
+                                    <th>Ảnh</th>
                                     <th>Danh Mục</th>
                                     <th>Sửa / Xóa</th>
                                 </tr>
                             </thead>
                             <tbody>
+                                <?php 
+                                    $laysp = "SELECT * FROM san_pham";
+                                    $qr_laysp = mysqli_query($ketnoi, $laysp);
+
+                                    while($sp = mysqli_fetch_array($qr_laysp)) {
+
+                                 ?>
                                 <tr class="gradeX">
-                                    <td>Trident</td>
-                                    <td>a</td>
-                                    <td>Win 95+</td>
-                                    <td>4</td>
-                                    <td>4</td>
-                                    <td>4</td>
-                                    <td>X</td>
-                                    <td>X</td>
+                                    <td><?php echo $sp['id']; ?></td>
+                                    <td><a href="../pages/chi-tiet-san-pham.php"><?php echo $sp['TenSanPham']; ?></a></td>
+                                    <td><?php echo $sp['SoLuong']; ?></td>
+                                    <td><?php echo number_format($sp['DonGia']); ?> VNĐ</td>
+                                    <td><?php echo number_format($sp['Gia_Giam']); ?> VNĐ</td>
+                                    <td><?php echo $sp['TrangThai']; ?></td>
+                                    <td style="width: 130px; text-align: center;">
+                                        <img style="max-height: 100px; max-width: 100px;" src="../images/shop/<?php echo $sp['Anh']; ?>" >
+                                    </td>
+                                    <td><?php echo $sp['DanhMuc']; ?></td>
                                     <td><a href="">Sửa</a> / <a href="">Xóa</a></td>
                                 </tr>
-                                <tr class="gradeX">
-                                    <td>Trident</td>
-                                    <td>a</td>
-                                    <td>Win 95+</td>
-                                    <td class="center">4</td>
-                                    <td class="center">X</td>
-                                    <td class="center">X</td>
-                                    <td class="center">X</td>
-                                    <td class="center">X</td>
-                                    <td><a href="">Sửa</a> / <a href="">Xóa</a></td>
-                                </tr>
-                                <tr class="gradeX">
-                                    <td>Trident</td>
-                                    <td>a</td>
-                                    <td>Win 95+</td>
-                                    <td class="center">4</td>
-                                    <td class="center">X</td>
-                                    <td class="center">X</td>
-                                    <td class="center">X</td>
-                                    <td class="center">X</td>
-                                    <td><a href="">Sửa</a> / <a href="">Xóa</a></td>
-                                </tr>
-                                <tr class="gradeX">
-                                    <td>Trident</td>
-                                    <td>a</td>
-                                    <td>Win 95+</td>
-                                    <td class="center">4</td>
-                                    <td class="center">X</td>
-                                    <td class="center">X</td>
-                                    <td class="center">X</td>
-                                    <td class="center">X</td>
-                                    <td><a href="">Sửa</a> / <a href="">Xóa</a></td>
-                                </tr>
-                                <tr">
-                                    <td>Trident</td>
-                                    <td>a</td>
-                                    <td>Win 95+</td>
-                                    <td class="center">4</td>
-                                    <td class="center">4</td>
-                                    <td class="center">4</td>
-                                    <td class="center">X</td>
-                                    <td class="center">X</td>
-                                    <td><a href="">Sửa</a> / <a href="">Xóa</a></td>
-                                </tr>
-                                
+                                <?php 
+                                    }
+                                 ?>
                             </tbody>
                         </table>
                         </div>
@@ -159,5 +131,6 @@
     }
 </style>
 <?php
+}
     include('layout/footer.php');
  ?>

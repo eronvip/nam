@@ -32,7 +32,7 @@
 
                         <div class="ibox-content">
                         <div class="">
-                            <a  href="them-danh-muc.php" class="btn btn-primary "> Thêm Danh Mục Sản Phẩm</a>
+                            <a  href="<?php echo  $url_admin; ?>pages/them-danh-muc.php" class="btn btn-primary "> Thêm Danh Mục Sản Phẩm</a>
                         </div>
                         <table class="table table-striped table-bordered table-hover " id="editable" >
                             <thead>
