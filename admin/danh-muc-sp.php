@@ -55,7 +55,7 @@
                                     <th><?php echo $dm['id']; ?></th>
                                     <th><?php echo $dm['TenDanhMuc']; ?></th>
                                     <th><?php echo $dm['MoTa']; ?></th>
-                                    <th><a href="">Sửa</a> / <a href="">Xóa</a></th>
+                                    <th><a href="" class="btn btn-success">Sửa</a>  <a href="" class="btn btn-danger">Xóa</a></th>
                                 </tr>
                                 
                             <?php 

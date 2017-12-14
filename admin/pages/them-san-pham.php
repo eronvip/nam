@@ -32,7 +32,7 @@
                             <h5>Thêm Sản phẩm Mới</h5>
                         </div>
                         <div class="ibox-content">
-                            <form method="POST" action="" class="form-horizontal">
+                            <form method="POST" action="" class="form-horizontal" enctype="multipart/form-data">
                                 <div class="form-group">
                                     <label class="col-sm-2 control-label">Tên Sản Phẩm</label>
                                     <div class="col-sm-10">
@@ -79,8 +79,9 @@
                                     <label class="col-sm-2 control-label">Trạng Thái</label>
                                     <div class="col-sm-10">
                                         <select name="trangthai" id="trangthai" class="form-control">
-                                            <option value="conhang">Còn hàng</option>
-                                            <option value="hethang">Hết hàng</option>
+                                            <option>Chọn Trạng Thái</option>
+                                            <option value="1">Còn hàng</option>
+                                            <option value="0">Hết hàng</option>
                                         </select>
                                     </div>
                                 </div>
@@ -95,7 +96,7 @@
                                 <div class="form-group">
                                     <label class="col-sm-2 control-label">Hình Ảnh 2</label>
                                     <div class="col-sm-10">
-                                        <input id="anh2" class="form-control"  type="file" name="anh3" style="padding-bottom: 40px; height: 32px;">
+                                        <input id="anh2" class="form-control"  type="file" name="anh2" style="padding-bottom: 40px; height: 32px;">
                                     </div>
                                 </div>
                                 <div class="hr-line-dashed"></div>
@@ -110,6 +111,7 @@
                                     <label class="col-sm-2 control-label">Danh Mục </label>
                                     <div class="col-sm-10">
                                         <select class="form-control" id="danhmuc" name="danhmuc">
+                                            <option>Chọn danh mục sản phẩm</option>
                                             <?php 
                                                 $laydm = "SELECT * FROM danh_muc";
                                                 $qr_laydm = mysqli_query($ketnoi, $laydm);
@@ -121,6 +123,7 @@
                                         </select>
                                     </div>
                                 </div>
+                                <div style="color: red; font-weight: bold;" class="text-danger" id="ThongBao"></div>
                                 <div class="hr-line-dashed"></div>
                                 <div class="form-group">
                                     <div class="col-sm-4 col-sm-offset-2">
@@ -130,7 +133,7 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div style="color: red" class="text-danger" id="ThongBao"></div>
+                                
                             </form>
                         </div>
                     </div>
@@ -139,7 +142,53 @@
                 <?php 
                     if($_SERVER["REQUEST_METHOD"] == "POST") {
 
-                            ///,.......................................
+                            $tensanpham = htmlentities(mysqli_real_escape_string($ketnoi, $_POST['tensanpham']));
+                            $soluong = $_POST['soluong'];
+                            $dongia = $_POST['dongia'];
+                            $giagiam = $_POST['giagiam'];
+                            $mota = htmlentities(mysqli_real_escape_string($ketnoi, $_POST['mota']));;
+                            $chitietsp = htmlentities(mysqli_real_escape_string($ketnoi, $_POST['chitietsp']));
+                            $trangthai = $_POST['trangthai'];
+                            $danhmuc = $_POST['danhmuc'];
+                            $anh1 = $_FILES["anh1"];
+                            $anh2 = $_FILES["anh2"];
+                            $anh3 = $_FILES["anh3"];
+
+                        if($anh1['name'] == "" || $anh2['name'] == "" || $anh3['name'] == "") {
+                            echo "<script>alert('Vui lòng chọn đủ 3 ảnh')</script>";
+                        } else {
+                            if($anh1["type"] != "image/jpeg" && $anh1["type"] != "image/png" && $anh1["type"] != "image/jpg") {
+                                echo "<script>alert('Chắc chắn file bạn chọn là ảnh ???')</script>";
+                                return;
+                            }
+                            if($anh2["type"] != "image/jpeg" && $anh2["type"] != "image/png" && $anh2["type"] != "image/jpg") {
+                                echo "<script>alert('Chắc chắn file bạn chọn là ảnh ???')</script>";
+                                return;
+                            }
+                             if($anh3["type"] != "image/jpeg" && $anh3["type"] != "image/png" && $anh3["type"] != "image/jpg") {
+                                echo "<script>alert('Chắc chắn file bạn chọn là ảnh ???')</script>";
+                                return;
+                            }
+                             //upload file
+                            move_uploaded_file($anh1["tmp_name"], "../uploads/sp/".$anh1["name"]);
+                            move_uploaded_file($anh2["tmp_name"], "../uploads/sp/".$anh2["name"]);
+                            move_uploaded_file($anh3["tmp_name"], "../uploads/sp/".$anh3["name"]);
+
+                            $themsp = "INSERT INTO san_pham VALUES('', '".$tensanpham."', '".$soluong."', '".$dongia."', '". $giagiam."', '".$mota."', '".$chitietsp."', '".$trangthai."', '".$anh1['name']."', '".$anh2['name']."', '".$anh3['name']."', '".$danhmuc."')";
+                            $qr_themsp = mysqli_query($ketnoi, $themsp);
+                            if($qr_themsp) {
+                                echo "<script>alert('Thêm sản phẩm thành công')</script>";
+                                echo "<script> window.location='../san-pham.php'</script>";
+                            } else {
+                                echo "<script>alert('Lỗi, vui lòng kiểm tra lại')</script>";
+                            }
+
+                       }
+                        
+                        
+                        
+
+                       
                     }
                 ?>
             </div>
@@ -148,22 +197,24 @@
             $(document).ready(function(){
                 $('#taotv').click(function(){
                     tensanpham = $('#tensanpham').val();
-                    tensanpham = $('#tensanpham').val();
-                    tensanpham = $('#tensanpham').val();
-                    tensanpham = $('#tensanpham').val();
-                    tensanpham = $('#tensanpham').val();
-                    tensanpham = $('#tensanpham').val();
-                    tensanpham = $('#tensanpham').val();
-                    tensanpham = $('#tensanpham').val();
-                    tensanpham = $('#tensanpham').val();
+                    soluong = $('#soluong').val();
+                    dongia = $('#dongia').val();
+                    giagiam = $('#giagiam').val();
                     mota = $('#mota').val();
+                    chitietsp = $('#chitietsp').val();
+                    trangthai = $('#trangthai').val();
+                    danhmuc = $('#danhmuc').val();
 
                     Loi =0;
 
-                    //kiểm tra đầy đủ thông tin
-                    if(tendanhmuc == "" || mota == "" ) {
+                    kiểm tra đầy đủ thông tin
+                    if(tensanpham == "" || soluong == "" || dongia == "" || giagiam == "" || mota == "" || chitietsp == "" || trangthai == "" || danhmuc == "" ) {
                         Loi++;
                         $('#ThongBao').text("Hãy nhập đầy đủ thông tin...");
+                    }
+                    if(isNaN(soluong) || isNaN(dongia) || isNaN(giagiam)){
+                        Loi++;
+                        $("#ThongBao").text("Hãy nhập đúng định dạng Số Lượng, Đơn Giá, Giá Giảm phải là số!");
                     }
 
                     if(Loi!=0) {

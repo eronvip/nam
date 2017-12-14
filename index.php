@@ -1,5 +1,6 @@
 <?php 
 	include('layouts/header.php');
+	include('inc/ketnoi.php');
  ?>
 	
 	<section id="slider"><!--slider-->
@@ -8,50 +9,40 @@
 				<div class="col-sm-12">
 					<div id="slider-carousel" class="carousel slide" data-ride="carousel">
 						<ol class="carousel-indicators">
-							<li data-target="#slider-carousel" data-slide-to="0" class="active"></li>
-							<li data-target="#slider-carousel" data-slide-to="1"></li>
-							<li data-target="#slider-carousel" data-slide-to="2"></li>
+						<?php 
+								$laybanner = "SELECT * FROM banner";
+	
+								$banner = "SELECT count(*) as c FROM banner";
+								$tong = mysqli_fetch_assoc(mysqli_query($ketnoi, $banner));
+								$a = $tong['c'];
+
+						 ?>
+							<?php 
+							// echo '<pre>';
+							// 	print_r($a);
+							// echo '</pre>';
+							//echo $tong;
+								for($i=0; $i<$a; $i++) {
+							 ?>
+							<li data-target="#slider-carousel" data-slide-to="<?= $i ?>" class='<?= $i==0? "active":""  ?>'></li>
+							<?php 
+								}
+							 ?>
 						</ol>
 						
 						<div class="carousel-inner">
-							<div class="item active">
-								<div class="col-sm-6">
-									<h1><span>E</span>-SHOPPER</h1>
-									<h2>Free E-Commerce Template</h2>
-									<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
-									<button type="button" class="btn btn-default get">Get it now</button>
-								</div>
-								<div class="col-sm-6">
-									<img src="images/home/girl1.jpg" class="girl img-responsive" alt="" />
-									<img src="images/home/pricing.png"  class="pricing" alt="" />
-								</div>
-							</div>
-							<div class="item">
-								<div class="col-sm-6">
-									<h1><span>E</span>-SHOPPER</h1>
-									<h2>100% Responsive Design</h2>
-									<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
-									<button type="button" class="btn btn-default get">Get it now</button>
-								</div>
-								<div class="col-sm-6">
-									<img src="images/home/girl2.jpg" class="girl img-responsive" alt="" />
-									<img src="images/home/pricing.png"  class="pricing" alt="" />
-								</div>
-							</div>
-							
-							<div class="item">
-								<div class="col-sm-6">
-									<h1><span>E</span>-SHOPPER</h1>
-									<h2>Free Ecommerce Template</h2>
-									<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
-									<button type="button" class="btn btn-default get">Get it now</button>
-								</div>
-								<div class="col-sm-6">
-									<img src="images/home/girl3.jpg" class="girl img-responsive" alt="" />
-									<img src="images/home/pricing.png" class="pricing" alt="" />
-								</div>
-							</div>
-							
+							<?php 
+								
+								for($i=0; $i<$a; $i++) {
+									 ?>
+									<div class='item <?= $i==0? "active":""  ?>'>
+										<div class="col-sm-12">
+											<img src="<?php echo $url ?>images/banner/<?php echo $bn['Anh'] ?>" class="girl img-responsive" alt="" />
+										</div>
+									</div>
+									<?php 
+										}
+							 ?>
 						</div>
 						
 						<a href="#slider-carousel" class="left control-carousel hidden-xs" data-slide="prev">
@@ -76,87 +67,34 @@
 				
 				<div class="col-sm-9 padding-right">
 					<div class="features_items"><!--features_items-->
-						<h2 class="title text-center">Sản Phẩm bán chạy</h2>
-						<div class="col-sm-4">
-							<div class="product-image-wrapper">
-								<div class="single-products">
-										<div class="productinfo text-center">
-											<img src="images/home/product1.jpg" alt="" />
-											<h2>56 VNĐ</h2>
-											<p><a href="">Easy Polo Black Edition</a></p>
-											<a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</a>
-										</div>
-								</div>
-								
-							</div>
-						</div>
-						<div class="col-sm-4">
-							<div class="product-image-wrapper">
-								<div class="single-products">
-									<div class="productinfo text-center">
-										<img src="images/home/product2.jpg" alt="" />
-										<h2>$56</h2>
-										<p><a href="">Easy Polo Black Edition</a></p>
-										<a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</a>
+						<h2 class="title text-center">Sản Phẩm mới </h2>
+						
+						<?php 
+							$laysp = "SELECT * FROM san_pham ORDER BY RAND() LIMIT 6";
+							$qr_laysp = mysqli_query($ketnoi, $laysp);
+							while($sp = mysqli_fetch_array($qr_laysp)) {
+
+						 ?>
+						 <!-- <div class="clearfix"></div> -->
+							<div class="col-sm-4">
+								<div class="product-image-wrapper">
+									<div class="single-products">
+											<div class="productinfo text-center">
+												<img style=" display:block;height: 255px;" src="<?php echo $url ?>admin/uploads/sp/<?php echo $sp['Anh'] ?>" alt="" />
+												<h2>56 VNĐ</h2>
+												<p><a href="">Easy Polo Black Edition</a></p>
+												<a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</a>
+											</div>
 									</div>
+									
 								</div>
-								
 							</div>
-						</div>
-						<div class="col-sm-4">
-							<div class="product-image-wrapper">
-								<div class="single-products">
-									<div class="productinfo text-center">
-										<img src="images/home/product3.jpg" alt="" />
-										<h2>$56</h2>
-										<p><a href="">Easy Polo Black Edition</a></p>
-										<a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</a>
-									</div>
-								</div>
-								
-							</div>
-						</div>
-						<div class="col-sm-4">
-							<div class="product-image-wrapper">
-								<div class="single-products">
-									<div class="productinfo text-center">
-										<img src="images/home/product4.jpg" alt="" />
-										<h2>$56</h2>
-										<p><a href="">Easy Polo Black Edition</a></p>
-										<a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</a>
-									</div>
-									<img src="images/home/new.png" class="new" alt="" />
-								</div>
-								
-							</div>
-						</div>
-						<div class="col-sm-4">
-							<div class="product-image-wrapper">
-								<div class="single-products">
-									<div class="productinfo text-center">
-										<img src="images/home/product5.jpg" alt="" />
-										<h2>$56</h2>
-										<p><a href="">Easy Polo Black Edition</a></p>
-										<a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</a>
-									</div>
-									<img src="images/home/sale.png" class="new" alt="" />
-								</div>
-								
-							</div>
-						</div>
-						<div class="col-sm-4">
-							<div class="product-image-wrapper">
-								<div class="single-products">
-									<div class="productinfo text-center">
-										<img src="images/home/product6.jpg" alt="" />
-										<h2>$56</h2>
-										<p><a href="">Easy Polo Black Edition</a></p>
-										<a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</a>
-									</div>
-								</div>
-								
-							</div>
-						</div>
+						<!-- /<div class="clearfix"></div> -->
+						<?php 
+							}
+
+						 ?>
+
 						
 					</div><!--features_items-->
 					

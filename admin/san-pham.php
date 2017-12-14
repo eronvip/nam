@@ -51,21 +51,42 @@
                                     $laysp = "SELECT * FROM san_pham";
                                     $qr_laysp = mysqli_query($ketnoi, $laysp);
 
-                                    while($sp = mysqli_fetch_array($qr_laysp)) {
+                                    
 
+
+
+                                    while($sp = mysqli_fetch_array($qr_laysp)) {
+                                        $madanhmuc =  $sp['DanhMuc']; 
+                                        $laydm1 = "SELECT * FROM danh_muc WHERE id='".$madanhmuc."'";
+                                        $qr_dm1 = mysqli_query($ketnoi, $laydm1);
+                                        $dm1 = mysqli_fetch_array($qr_dm1);
                                  ?>
-                                <tr class="gradeX">
+                                <tr class="gradeX" style="text-align: center; height: 120px; ">
                                     <td><?php echo $sp['id']; ?></td>
-                                    <td><a href="../pages/chi-tiet-san-pham.php"><?php echo $sp['TenSanPham']; ?></a></td>
+                                    <td style="max-width: 250px;"><a class="tensp" href="../pages/chi-tiet-san-pham.php"><?php echo $sp['TenSanPham']; ?></a></td>
                                     <td><?php echo $sp['SoLuong']; ?></td>
                                     <td><?php echo number_format($sp['DonGia']); ?> VNĐ</td>
                                     <td><?php echo number_format($sp['Gia_Giam']); ?> VNĐ</td>
-                                    <td><?php echo $sp['TrangThai']; ?></td>
-                                    <td style="width: 130px; text-align: center;">
-                                        <img style="max-height: 100px; max-width: 100px;" src="../images/shop/<?php echo $sp['Anh']; ?>" >
+                                    <td>
+                                        <?php 
+                                        $trangthaisp =  $sp['TrangThai']; 
+                                            if($trangthaisp == 1) {
+                                                echo "Còn hàng";
+                                            } elseif($trangthaisp == 0) {
+                                                echo "Hết hàng";
+                                            }
+                                        ?>
+                                        
                                     </td>
-                                    <td><?php echo $sp['DanhMuc']; ?></td>
-                                    <td><a href="">Sửa</a> / <a href="">Xóa</a></td>
+                                    <td style="width: 130px; text-align: center;">
+                                        <img style="max-height: 100px; max-width: 100px;" src="uploads/sp/<?php echo $sp['Anh']; ?>" >
+                                    </td>
+                                    <td>
+                                        <?php
+                                            echo  $dm1['TenDanhMuc'];
+                                         ?>
+                                    </td>
+                                    <td><a class="btn btn-success" href="">Sửa</a>  <a class="btn btn-danger" href="">Xóa</a></td>
                                 </tr>
                                 <?php 
                                     }

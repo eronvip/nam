@@ -5064,7 +5064,7 @@ body.skin-3 {
     background-color: gray;
     width: 96px;
 }
-.gradeX.odd td {
+.gradeX td {
     text-align: center;
-    line-height: 110px;
+    vertical-align: middle !important;
 }
