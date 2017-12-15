@@ -1,5 +1,5 @@
 <?php 
-	$ketnoi = mysqli_connect("localhost", "root", "", "nam");
+	$ketnoi = mysqli_connect("localhost", "root", "", "store_db");
 
 	//kiểm tra kết nối
 	if (mysqli_connect_errno()) {
