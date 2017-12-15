@@ -11,20 +11,32 @@
 						<ol class="carousel-indicators">
 						<?php 
 								$laybanner = "SELECT * FROM banner";
+								$tv_bn = mysqli_query($ketnoi, $laybanner);
+								$tv_bm = mysqli_query($ketnoi, $laybanner);
+
+								while($bn =mysqli_fetch_array($tv_bn)) {
+							 			$demo[] = $bn;
+							 	}
+							 	$tong = count($demo);
+							 	//echo json_encode($demo);
+							 	//die;
+								// echo "<pre>";
+								// 	print_r(count($demo));
+								// echo "</pre>";
+
+								// echo count($bn);
+
+								//die;
 	
-								$banner = "SELECT count(*) as c FROM banner";
-								$tong = mysqli_fetch_assoc(mysqli_query($ketnoi, $banner));
-								$a = $tong['c'];
+								// $banner = "SELECT count(*) as c FROM banner";
+								// $tong = mysqli_fetch_assoc(mysqli_query($ketnoi, $banner));
+								// $a = $tong['c'];
 
 						 ?>
 							<?php 
-							// echo '<pre>';
-							// 	print_r($a);
-							// echo '</pre>';
-							//echo $tong;
-								for($i=0; $i<$a; $i++) {
+							for($i=0; $i<$tong; $i++) {
 							 ?>
-							<li data-target="#slider-carousel" data-slide-to="<?= $i ?>" class='<?= $i==0? "active":""  ?>'></li>
+							<li data-target="#slider-carousel" data-slide-to="<?= $i?>" class='<?= $i==0 ? "active": ""?>'></li>
 							<?php 
 								}
 							 ?>
@@ -32,12 +44,11 @@
 						
 						<div class="carousel-inner">
 							<?php 
-								
-								for($i=0; $i<$a; $i++) {
+								for($i=0; $i<$tong; $i++) {
 									 ?>
-									<div class='item <?= $i==0? "active":""  ?>'>
+									<div class='item <?= $i==0 ? "active": ""?>'>
 										<div class="col-sm-12">
-											<img src="<?php echo $url ?>images/banner/<?php echo $bn['Anh'] ?>" class="girl img-responsive" alt="" />
+											<img src="images/banner/<?=$demo[$i]['Anh'] ?>" class="girl img-responsive" alt="" />
 										</div>
 									</div>
 									<?php 
