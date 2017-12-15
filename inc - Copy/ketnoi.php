@@ -9,4 +9,4 @@
 	//set utf8 
 	mysqli_set_charset($ketnoi, "utf8");
 
-?>sss
+?>
