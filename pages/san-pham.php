@@ -1,24 +1,20 @@
-<?php 
+<?php
 	require_once('../layouts/header.php');
 	include('../inc/ketnoi.php');
  ?>
 	<section id="advertisement">
 		<div class="container">
-			<img src="<?php echo $url; ?>images/shop/advertisement.jpg" alt="" />
+			<img src="/images/shop/advertisement.jpg" alt="" />
 		</div>
 	</section>
-	
 	<section>
 		<div class="container">
 			<div class="row">
-				<?php 
-					require_once('../layouts/menu.php');
-				 ?>
+				<?php require_once('../layouts/menu.php'); ?>
 				<div class="col-sm-9 padding-right">
 					<div class="features_items"><!--features_items-->
 						<h2 class="title text-center">Danh Mục Sản Phẩm</h2>
-
-				<?php 
+				<?php
 					//khởi tạo trang ban đầu
 					$page=1;
 				//số sản phẩm trên 1 trang
@@ -46,9 +42,8 @@
 					$start=($page-1)*$limit;
 				//lấy ra danh sách và gán vào biến $cots:
 					$cots = mysqli_query($ketnoi,"SELECT * FROM san_pham LIMIT $start,$limit");
-					foreach($cots as $cot){ 
+					foreach($cots as $cot){
 					 ?>
-						
 						<div class="col-sm-4">
 							<div class="product-image-wrapper">
 								<div class="single-products">
@@ -61,17 +56,13 @@
 											Thêm Vào Giỏ
 										</a>
 									</div>
-									
 								</div>
 							</div>
 						</div>
 					<?php } ?>
-						
-						
 					</div><!--features_items-->
 					<ul class="pagination pull-right">
-						<?php 
-							for($i=1;$i<=$TongTrang;$i++){ ?>
+						<?php for($i=1;$i<=$TongTrang;$i++){ ?>
 					    		<li <?php if($page == $i) echo "class='active'"; ?> >
 					    			<a href="san-pham.php?trang=<?= $i; ?>">
 					    				<?= $i; ?>
@@ -83,7 +74,6 @@
 			</div>
 		</div>
 	</section>
-	
-	<?php 
+	<?php
 		require_once('../layouts/footer.php');
 	 ?>
