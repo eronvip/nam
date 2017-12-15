@@ -60,7 +60,9 @@
 				<div class="row">
 					<div class="col-sm-4">
 						<div class="logo pull-left">
-							<a href="index.html"><img src="<?php echo $url; ?>images/home/logo.png" alt="" /></a>
+							<a  href="index.html">
+								<img style="height: 90px;" src="<?php echo $url; ?>images/home/logo.png" alt="" />
+							</a>
 						</div>
 					</div>
 					<div class="col-sm-8">

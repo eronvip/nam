@@ -48,7 +48,7 @@
 									 ?>
 									<div class='item <?= $i==0 ? "active": ""?>'>
 										<div class="col-sm-12">
-											<img src="images/banner/<?=$demo[$i]['Anh'] ?>" class="girl img-responsive" alt="" />
+											<img src="images/banner/<?=$demo[$i]['Anh'] ?>" class="girl img-responsive" style="height: 500px;" />
 										</div>
 									</div>
 									<?php 
