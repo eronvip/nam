@@ -10,28 +10,14 @@
 					<div id="slider-carousel" class="carousel slide" data-ride="carousel">
 						<ol class="carousel-indicators">
 						<?php 
-								$laybanner = "SELECT * FROM banner";
-								$tv_bn = mysqli_query($ketnoi, $laybanner);
-								$tv_bm = mysqli_query($ketnoi, $laybanner);
+							$laybanner = "SELECT * FROM banner";
+							$tv_bn = mysqli_query($ketnoi, $laybanner);
+							$tv_bm = mysqli_query($ketnoi, $laybanner);
 
-								while($bn =mysqli_fetch_array($tv_bn)) {
-							 			$demo[] = $bn;
-							 	}
-							 	$tong = count($demo);
-							 	//echo json_encode($demo);
-							 	//die;
-								// echo "<pre>";
-								// 	print_r(count($demo));
-								// echo "</pre>";
-
-								// echo count($bn);
-
-								//die;
-	
-								// $banner = "SELECT count(*) as c FROM banner";
-								// $tong = mysqli_fetch_assoc(mysqli_query($ketnoi, $banner));
-								// $a = $tong['c'];
-
+							while($bn =mysqli_fetch_array($tv_bn)) {
+						 			$demo[] = $bn;
+						 	}
+						 	$tong = count($demo);
 						 ?>
 							<?php 
 							for($i=0; $i<$tong; $i++) {
@@ -48,7 +34,7 @@
 									 ?>
 									<div class='item <?= $i==0 ? "active": ""?>'>
 										<div class="col-sm-12">
-											<img src="images/banner/<?=$demo[$i]['Anh'] ?>" class="girl img-responsive" style="height: 500px;" />
+											<img src="images/banner/<?=$demo[$i]['Anh'] ?>" class="girl img-responsive" style="height: 500px; width: 910px;" />
 										</div>
 									</div>
 									<?php 
