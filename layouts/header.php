@@ -1,5 +1,5 @@
 <?php 
-	$url = "http://ldc.dev/nam/";
+	$url = "/";
 
  ?>
 <!DOCTYPE html>
@@ -10,22 +10,22 @@
     <meta name="description" content="">
     <meta name="author" content="">
     <title>NN Shop</title>
-    <link href="<?php echo $url; ?>css/bootstrap.min.css" rel="stylesheet">
-    <link href="<?php echo $url; ?>css/font-awesome.min.css" rel="stylesheet">
-    <link href="<?php echo $url; ?>css/prettyPhoto.css" rel="stylesheet">
-    <link href="<?php echo $url; ?>css/price-range.css" rel="stylesheet">
-    <link href="<?php echo $url; ?>css/animate.css" rel="stylesheet">
-	<link href="<?php echo $url; ?>css/main.css" rel="stylesheet">
-	<link href="<?php echo $url; ?>css/responsive.css" rel="stylesheet">
+    <link href="/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/css/font-awesome.min.css" rel="stylesheet">
+    <link href="/css/prettyPhoto.css" rel="stylesheet">
+    <link href="/css/price-range.css" rel="stylesheet">
+    <link href="/css/animate.css" rel="stylesheet">
+	<link href="/css/main.css" rel="stylesheet">
+	<link href="/css/responsive.css" rel="stylesheet">
     <!--[if lt IE 9]>
     <script src="js/html5shiv.js"></script>
     <script src="js/respond.min.js"></script>
     <![endif]-->       
-    <link rel="shortcut icon" href="<?php echo $url; ?>images/ico/favicon.ico">
-    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="<?php echo $url; ?>images/ico/apple-touch-icon-144-precomposed.png">
-    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="i<?php echo $url; ?>mages/ico/apple-touch-icon-114-precomposed.png">
-    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="<?php echo $url; ?>images/ico/apple-touch-icon-72-precomposed.png">
-    <link rel="apple-touch-icon-precomposed" href="<?php echo $url; ?>images/ico/apple-touch-icon-57-precomposed.png">
+    <link rel="shortcut icon" href="/images/ico/favicon.ico">
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/images/ico/apple-touch-icon-144-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="i/mages/ico/apple-touch-icon-114-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="/images/ico/apple-touch-icon-72-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" href="/images/ico/apple-touch-icon-57-precomposed.png">
 </head><!--/head-->
 
 <body>
@@ -61,7 +61,7 @@
 					<div class="col-sm-4">
 						<div class="logo pull-left">
 							<a  href="index.html">
-								<img style="height: 90px;" src="<?php echo $url; ?>images/home/logo.png" alt="" />
+								<img style="height: 90px;" src="/images/home/logo.png" alt="" />
 							</a>
 						</div>
 					</div>
@@ -96,9 +96,9 @@
 								<li><a href="index.html" class="active">Trang Chủ</a></li>
 								<li class="dropdown"><a href="#">Danh Mục<i class="fa fa-angle-down"></i></a>
                                     <ul role="menu" class="sub-menu">
-                                        <li><a href="<?php echo $url; ?>pages/san-pham.php">Sản Phẩm</a></li>
-										<li><a href="<?php echo $url; ?>pages/thanh-toan.php">Thanh Toán</a></li> 
-										<li><a href="<?php echo $url; ?>pages/gio-hang.php">Giỏ hàng</a></li> 
+                                        <li><a href="/pages/san-pham.php">Sản Phẩm</a></li>
+										<li><a href="/pages/thanh-toan.php">Thanh Toán</a></li> 
+										<li><a href="/pages/gio-hang.php">Giỏ hàng</a></li> 
 										<li><a href="login.html">Đăng Nhập</a></li> 
                                     </ul>
                                 </li> 

@@ -80,11 +80,11 @@
 	
 
   
-    <script src="<?php echo $url; ?>js/jquery.js"></script>
-	<script src="<?php echo $url; ?>js/bootstrap.min.js"></script>
-	<script src="<?php echo $url; ?>js/jquery.scrollUp.min.js"></script>
-	<script src="<?php echo $url; ?>js/price-range.js"></script>
-    <script src="<?php echo $url; ?>js/jquery.prettyPhoto.js"></script>
-    <script src="<?php echo $url; ?>js/main.js"></script>
+    <script src="/js/jquery.js"></script>
+	<script src="/js/bootstrap.min.js"></script>
+	<script src="/js/jquery.scrollUp.min.js"></script>
+	<script src="/js/price-range.js"></script>
+    <script src="/js/jquery.prettyPhoto.js"></script>
+    <script src="/js/main.js"></script>
 </body>
 </html>
