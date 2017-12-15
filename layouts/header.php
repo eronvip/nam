@@ -1,6 +1,5 @@
 <?php 
 	$url = "/";
-
  ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -17,6 +16,7 @@
     <link href="/css/animate.css" rel="stylesheet">
 	<link href="/css/main.css" rel="stylesheet">
 	<link href="/css/responsive.css" rel="stylesheet">
+	<script src="/js/jquery.js"></script>
     <!--[if lt IE 9]>
     <script src="js/html5shiv.js"></script>
     <script src="js/respond.min.js"></script>
@@ -60,7 +60,7 @@
 				<div class="row">
 					<div class="col-sm-4">
 						<div class="logo pull-left">
-							<a  href="index.html">
+							<a  href="../index.php">
 								<img style="height: 90px;" src="/images/home/logo.png" alt="" />
 							</a>
 						</div>
@@ -68,7 +68,7 @@
 					<div class="col-sm-8">
 						<div class="shop-menu pull-right">
 							<ul class="nav navbar-nav">
-								<li><a href="#"><i class="fa fa-user"></i> Tài Khoản</a></li>
+								<li><a href="../pages/tai-khoan.php"><i class="fa fa-user"></i> Tài Khoản</a></li>
 								<li><a href="checkout.html"><i class="fa fa-crosshairs"></i> Thanh Toán</a></li>
 								<li><a href="cart.html"><i class="fa fa-shopping-cart"></i> Giỏ Hàng</a></li>
 								<li><a href="login.html"><i class="fa fa-lock"></i> Đăng Nhập</a></li>
@@ -93,7 +93,7 @@
 						</div>
 						<div class="mainmenu pull-left">
 							<ul class="nav navbar-nav collapse navbar-collapse">
-								<li><a href="index.html" class="active">Trang Chủ</a></li>
+								<li><a href="../index.php" class="active">Trang Chủ</a></li>
 								<li class="dropdown"><a href="#">Danh Mục<i class="fa fa-angle-down"></i></a>
                                     <ul role="menu" class="sub-menu">
                                         <li><a href="/pages/san-pham.php">Sản Phẩm</a></li>

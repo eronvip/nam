@@ -1,8 +1,9 @@
 <?php 
-	require_once('../layouts/header.php');
+	include('../layouts/header.php');
 	include('../inc/ketnoi.php');
  ?>
  	<div class="container">
+ 		
  		<div class="row">
  	<?php 
 		require_once('../layouts/menu.php');

@@ -1,5 +1,5 @@
 <?php 
-    $url_admin = "http://ldc.dev/nam/admin/";
+    $url_admin = "/";
  ?>
 <!DOCTYPE html>
 <html>
@@ -7,25 +7,25 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>NN Shop | Dashboard</title>
-    <link rel="icon" href="<?php echo  $url_admin; ?>img/logo.png">
-    <link href="<?php echo  $url_admin; ?>css/bootstrap.min.css" rel="stylesheet">
-    <link href="<?php echo  $url_admin; ?>font-awesome/css/font-awesome.css" rel="stylesheet">
+    <link rel="icon" href="/img/logo.png">
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="font-awesome/css/font-awesome.css" rel="stylesheet">
     <!-- Toastr style -->
-    <link href="<?php echo  $url_admin; ?>css/plugins/toastr/toastr.min.css" rel="stylesheet">
+    <link href="css/plugins/toastr/toastr.min.css" rel="stylesheet">
     <!-- Gritter -->
-    <link href="<?php echo  $url_admin; ?>js/plugins/gritter/jquery.gritter.css" rel="stylesheet">
-    <link href="<?php echo  $url_admin; ?>css/animate.css" rel="stylesheet">
-    <link href="<?php echo  $url_admin; ?>css/style.css" rel="stylesheet">
+    <link href="js/plugins/gritter/jquery.gritter.css" rel="stylesheet">
+    <link href="css/animate.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
     <!-- Data Tables -->
-    <link href="<?php echo  $url_admin; ?>css/plugins/dataTables/dataTables.bootstrap.css" rel="stylesheet">
-    <link href="<?php echo  $url_admin; ?>css/plugins/dataTables/dataTables.responsive.css" rel="stylesheet">
-    <link href="<?php echo  $url_admin; ?>css/plugins/dataTables/dataTables.tableTools.min.css" rel="stylesheet">
+    <link href="css/plugins/dataTables/dataTables.bootstrap.css" rel="stylesheet">
+    <link href="css/plugins/dataTables/dataTables.responsive.css" rel="stylesheet">
+    <link href="css/plugins/dataTables/dataTables.tableTools.min.css" rel="stylesheet">
 
-    <link href="<?php echo  $url_admin; ?>css/animate.css" rel="stylesheet">
-    <link href="<?php echo  $url_admin; ?>css/style.css" rel="stylesheet">
-    <script src="<?php echo  $url_admin; ?>js/jquery-2.1.1.js"></script>
-    <script src="<?php echo  $url_admin; ?>js/bootstrap.min.js"></script>
-    <script src="<?php echo  $url_admin; ?>js/fileinput.min.js"></script>
+    <link href="css/animate.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+    <script src="js/jquery-2.1.1.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/fileinput.min.js"></script>
 </head>
 
 <body>
@@ -35,7 +35,7 @@
                 <ul class="nav" id="side-menu">
                     <li class="nav-header">
                         <div class="dropdown profile-element"> <span>
-                            <img alt="image" class="img-circle" src="<?php echo  $url_admin; ?>img/profile_small.jpg" />
+                            <img alt="image" class="img-circle" src="img/profile_small.jpg" />
                              </span>
                             <a data-toggle="dropdown" class="dropdown-toggle" href="#">
                             <span class="clear"> <span class="block m-t-xs"> <strong class="font-bold">LongDuong</strong>
@@ -53,22 +53,22 @@
                         </div> -->
                     </li>
                     <li class="active">
-                        <a href="<?php echo  $url_admin; ?>index.php"><i class="fa fa-th-large"></i> <span class="nav-label">Trang Chủ</span></span></a>
+                        <a href="index.php"><i class="fa fa-th-large"></i> <span class="nav-label">Trang Chủ</span></span></a>
                     </li>
                     <li>
-                        <a href="<?php echo  $url_admin; ?>thanh-vien.php"><i class="fa fa-diamond"></i> <span class="nav-label">Thành Viên</span> </span></a>
+                        <a href="thanh-vien.php"><i class="fa fa-diamond"></i> <span class="nav-label">Thành Viên</span> </span></a>
                     </li>
                     <li>
-                        <a href="<?php echo  $url_admin; ?>nhan-vien.php"><i class="fa fa-bar-chart-o"></i> <span class="nav-label">Nhân Viên</span></span></a>
+                        <a href="nhan-vien.php"><i class="fa fa-bar-chart-o"></i> <span class="nav-label">Nhân Viên</span></span></a>
                     </li>
                     <li>
                         <a href=""><i class="fa fa-envelope"></i> <span class="nav-label">Tin Nhắn </span></a>
                     </li>
                     <li>
-                        <a href="<?php echo  $url_admin; ?>danh-muc-sp.php"><i class="fa fa-flask"></i> <span class="nav-label">Danh Mục Sản Phẩm</span> </a>
+                        <a href="danh-muc-sp.php"><i class="fa fa-flask"></i> <span class="nav-label">Danh Mục Sản Phẩm</span> </a>
                     </li>
                     <li>
-                        <a href="<?php echo  $url_admin; ?>san-pham.php"><i class="fa fa-edit"></i> <span class="nav-label">Sản Phẩm</span></a>
+                        <a href="san-pham.php"><i class="fa fa-edit"></i> <span class="nav-label">Sản Phẩm</span></a>
                     </li>
                     <li>
                         <a href="#"><i class="fa fa-desktop"></i> <span class="nav-label">DơnĐặt Hàng</span></span></a>

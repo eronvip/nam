@@ -888,6 +888,7 @@ h2.title {
 
 .productinfo{
  position:relative;
+ height: 420px;
 }
 
 .product-overlay {
@@ -1016,7 +1017,7 @@ h2.title {
 }
 
 .category-tab ul  li  a:hover{
-	background:#FE980F;
+	background:blue;
 	color:#fff;
 }
 
@@ -1113,7 +1114,7 @@ h2.title {
 }
 
 .pagination  .active  a, .pagination  .active  span, .pagination  .active  a:hover, .pagination  .active  span:hover, .pagination  .active  a:focus, .pagination  .active  span:focus {
-  background-color: #FE980F;
+  background-color: gray;
   border-color: #FE980F;
   color: #FFFFFF;
   cursor: default;
@@ -1134,7 +1135,7 @@ h2.title {
 }
 
 .pagination  li  a:hover{
-	background:#FE980F;
+	background:blue;
 	color:#fff;
 }
 
@@ -1428,7 +1429,7 @@ h2.title {
 #form {
   display: block;
   margin-bottom: 185px;
-  margin-top: 185px;
+  margin-top: 60px;
   overflow: hidden;
 }
 
@@ -1479,7 +1480,7 @@ h2.title {
   margin-top: 23px;
 }
 
-.login-form form button, .signup-form form button {
+/*.login-form form button, .signup-form form button {
   background: #FE980F;
   border: medium none;
   border-radius: 0;
@@ -1487,7 +1488,7 @@ h2.title {
   display: block;
   font-family: 'Roboto', sans-serif;
   padding: 6px 25px;
-}
+}*/
 
 .login-form label{
 
@@ -2528,4 +2529,12 @@ a.btn.btn-success.pull-right.dathang {
 }
 .girl.img-responsive {
     height: 500px;
+}
+.tensp {
+    color: gray;
+    font-size: 15px;
+}
+.tensp:hover {
+    color: blue;
+    font-size: 15px;
 }

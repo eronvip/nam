@@ -35,7 +35,7 @@
 						</div><!--/price-range-->
 						<!--quảng cáo-->
 						<div class="shipping text-center">
-							<img src="<?php echo $url; ?>images/home/shipping.jpg" alt="" />
+							<img src="<?=$url;?>images/home/shipping.jpg" alt="" />
 						</div>
 						<!--/quảng cáo-->
 					</div>
