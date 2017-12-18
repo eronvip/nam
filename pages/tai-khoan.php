@@ -1,8 +1,7 @@
-<?php 
+<?php
 	require_once('../layouts/header.php');
 	require_once('../inc/ketnoi.php');
  ?>
-
 	<section id="form">
 		<div class="container">
 			<div class="row">
@@ -20,14 +19,13 @@
 							</div>
 							<div id="ThongBao_dn" class="text-danger" style="color: red; font-weight:bold;"></div>
 							<span>
-								<input type="checkbox" class="checkbox"> 
+								<input type="checkbox" class="checkbox">
 								Ghi nhớ đăng nhập
 							</span>
 
 							<div class="form-group">
 								<button id="dangnhap" type="submit" class="btn btn-success">Đăng Nhập</button>
 							</div>
-							
 						</form>
 					</div>
 				</div>
@@ -126,6 +124,6 @@
 	</script>
 
 
-<?php 
+<?php
 	require_once('../layouts/footer.php');
 ?>
