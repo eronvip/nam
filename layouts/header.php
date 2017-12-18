@@ -63,12 +63,12 @@ session_start();
 					<div class="col-sm-4">
 						<div class="logo pull-left">
 							<a  href="../index.php">
-								<img style="height: 90px;" src="/images/home/logo.png" alt="" />
+								<img style="height: 70px;" src="/images/home/logo.png" alt="" />
 							</a>
 						</div>
 					</div>
 					<div class="col-sm-8">
-						<div class="shop-menu pull-right">
+						<div class="shop-menu pull-right" style="margin: 15px;">
 							<ul class="nav navbar-nav">
 								<li>
 									<a href="../pages/tai-khoan.php"><i class="fa fa-user"></i> Tài Khoản</a>
@@ -90,7 +90,7 @@ session_start();
 										<ul class="nav navbar-nav collapse navbar-collapse">
 											<li class="dropdown"><a href="#"><i class="fa fa-user"></i> Xin Chào: <b><?=$user['TenThanhVien'];?></b></a>
 			                                    <ul role="menu" class="sub-menu">
-			                                        <li><a href="">Thông tin tài khoản</a></li>
+			                                        <li><a href="pages/thong-tin-tai-khoan.php">Thông tin tài khoản</a></li>
 													<li><a href="">Lịch sử mua hàng</a></li> 
 													<li><a href="">Đăng xuất</a></li> 
 			                                    </ul>
@@ -146,14 +146,6 @@ session_start();
 			<div class="container">
 				<div class="row">
 					<div class="col-sm-9">
-						<div class="navbar-header">
-							<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-								<span class="sr-only">Toggle navigation</span>
-								<span class="icon-bar"></span>
-								<span class="icon-bar"></span>
-								<span class="icon-bar"></span>
-							</button>
-						</div>
 						<div class="mainmenu pull-left">
 							<ul class="nav navbar-nav collapse navbar-collapse">
 								<li><a href="../index.php" class="active">Trang Chủ</a></li>
@@ -178,6 +170,7 @@ session_start();
 						</div>
 					</div>
 				</div>
+				<hr>
 			</div>
 		</div><!--/header-bottom-->
 	</header><!--/header-->

@@ -137,7 +137,6 @@ a#scrollUp i{
 }
 
 .header-middle .container .row {
-  border-bottom: 1px solid #f5f5f5;
   margin-left: 0;
   margin-right: 0;
   padding-bottom: 20px;
@@ -2540,4 +2539,7 @@ a.btn.btn-success.pull-right.dathang {
 }
 .dangnhap {
     margin: 35px;
+}
+.header-middle {
+  height: 70px !important;
 }
