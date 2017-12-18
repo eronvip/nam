@@ -198,7 +198,7 @@ a#scrollUp i{
 
 
 .shop-menu ul li a {
-  background: #FFFFFF;
+  /*background: #FFFFFF;*/
   color: #696763;
   font-family: 'Roboto', sans-serif;
   font-size: 14px;
@@ -1506,7 +1506,7 @@ h2.title {
 
 
 .or{
-	background: #FE980F;
+	background: #0f4cfe;
 	border-radius: 40px;
 	color: #FFFFFF;
 	font-family: 'Roboto', sans-serif;
@@ -2537,4 +2537,7 @@ a.btn.btn-success.pull-right.dathang {
 .tensp:hover {
     color: blue;
     font-size: 15px;
+}
+.dangnhap {
+    margin: 35px;
 }

@@ -1,5 +1,7 @@
 <?php 
+session_start();
 	$url = "/";
+	//include('inc/ketnoi.php');
  ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -68,10 +70,71 @@
 					<div class="col-sm-8">
 						<div class="shop-menu pull-right">
 							<ul class="nav navbar-nav">
-								<li><a href="../pages/tai-khoan.php"><i class="fa fa-user"></i> Tài Khoản</a></li>
-								<li><a href="checkout.html"><i class="fa fa-crosshairs"></i> Thanh Toán</a></li>
-								<li><a href="cart.html"><i class="fa fa-shopping-cart"></i> Giỏ Hàng</a></li>
-								<li><a href="login.html"><i class="fa fa-lock"></i> Đăng Nhập</a></li>
+								<li>
+									<a href="../pages/tai-khoan.php"><i class="fa fa-user"></i> Tài Khoản</a>
+								</li>
+								<li>
+									<a href="checkout.html"><i class="fa fa-crosshairs"></i> Thanh Toán</a>
+								</li>
+								<li>
+									<a href="cart.html"><i class="fa fa-shopping-cart"></i> Giỏ Hàng</a>
+								</li>
+								<?php 
+									if(isset($_SESSION['login'])) {
+										$ketnoi = mysqli_connect("localhost", "root", "", "nam");
+										mysqli_set_charset($ketnoi, "utf8");
+										$email = $_SESSION['login'];
+										$user = mysqli_fetch_array(mysqli_query($ketnoi, "SELECT * FROM thanh_vien WHERE Email='".$email."'"));
+									?>
+									<div class="mainmenu pull-left">
+										<ul class="nav navbar-nav collapse navbar-collapse">
+											<li class="dropdown"><a href="#"><i class="fa fa-user"></i> Xin Chào: <b><?=$user['TenThanhVien'];?></b></a>
+			                                    <ul role="menu" class="sub-menu">
+			                                        <li><a href="">Thông tin tài khoản</a></li>
+													<li><a href="">Lịch sử mua hàng</a></li> 
+													<li><a href="">Đăng xuất</a></li> 
+			                                    </ul>
+			                                </li> 
+											
+										</ul>
+									</div>
+		
+									<?php
+									} else {
+								 ?>
+									<li>
+										<a href="" data-toggle="modal" data-target=".bs-example-modal-lg">
+											<i class="fa fa-lock"></i> Đăng Nhập
+										</a>
+									</li>
+								<?php 
+									}
+								 ?>
+								<div class="modal fade bs-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+								  <div class="modal-dialog modal-lg">
+								    <div class="modal-content">
+								    	<div class="dangnhap">
+								    		<h2>Đăng Nhập</h2>
+											<form action="../pages/xuly/dang-nhap.php" method="POST">
+												<div class="form-group">
+													<span>Email:</span>
+													<input class="form-control" type="email" name="email" id="em" placeholder="Email đăng nhập">
+												</div>
+												<div class="form-group">
+													<span>Mật Khẩu:</span>
+													<input class="form-control" type="password" name="matkhau" id="mk" placeholder="Mật khẩu đăng nhập">
+												</div>
+												<div id="tb" class="text-danger" style="color: red; font-weight:bold;"></div>
+												<div>
+													<input type="checkbox" name="ghinhodangnhap"> Ghi nhớ đăng nhập
+													<a href="" style="float:right;">Quên mật khẩu</a>
+												</div>
+												<button id="dn" class="btn btn-info">Đăng Nhập</button>
+											</form>
+								    	</div>
+								    </div>
+								  </div>
+								</div>
 							</ul>
 						</div>
 					</div>

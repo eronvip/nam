@@ -1,6 +1,6 @@
 <?php 
 	require_once('../layouts/header.php');
-	include('../inc/ketnoi.php');
+	require_once('../inc/ketnoi.php');
  ?>
 
 	<section id="form">
@@ -9,7 +9,7 @@
 				<div class="col-sm-4 col-sm-offset-1">
 					<div class="login-form">
 						<h2><b>Thành Viên Đăng Nhập</b> </h2>
-						<form action="" method="POST">
+						<form action="xuly/dang-nhap.php" method="POST">
 							<div class="form-group">
 								<span><b>Email</b></span>
 								<input name="email" id="email" class="form-control" type="email" placeholder="Email của bạn">
@@ -18,6 +18,7 @@
 								<span>Mật Khẩu</span>
 								<input name="matkhau" id="matkhau" class="form-control" type="password" placeholder="Mật khẩu của bạn">
 							</div>
+							<div id="ThongBao_dn" class="text-danger" style="color: red; font-weight:bold;"></div>
 							<span>
 								<input type="checkbox" class="checkbox"> 
 								Ghi nhớ đăng nhập
@@ -80,6 +81,21 @@
 	</section>
 	<script>
 		$(document).ready(function(){
+			$('#dangnhap').click(function(){
+				email = $('#email').val();
+				matkhau = $('#matkhau').val();
+
+				Loi=0;
+				if(email == "" || matkhau == "") {
+                        Loi++;
+                        $('#ThongBao_dn').text("Hãy nhập đầy đủ thông tin...");
+                }
+                
+                
+				if(Loi!=0) {
+                    return false;
+                }
+			});
 			$('#dangky').click(function(){
 				hoten = $('#hoten_dn').val();
 				email = $('#email_dn').val();
