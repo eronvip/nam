@@ -8,24 +8,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>NN Shop | Dashboard</title>
     <link rel="icon" href="/img/logo.png">
-    <link href="css/bootstrap.min.css" rel="stylesheet">
-    <link href="font-awesome/css/font-awesome.css" rel="stylesheet">
+    <link href="/admin/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/admin/font-awesome/css/font-awesome.css" rel="stylesheet">
     <!-- Toastr style -->
-    <link href="css/plugins/toastr/toastr.min.css" rel="stylesheet">
+    <link href="/admin/css/plugins/toastr/toastr.min.css" rel="stylesheet">
     <!-- Gritter -->
-    <link href="js/plugins/gritter/jquery.gritter.css" rel="stylesheet">
-    <link href="css/animate.css" rel="stylesheet">
-    <link href="css/style.css" rel="stylesheet">
+    <link href="/admin/js/plugins/gritter/jquery.gritter.css" rel="stylesheet">
+    <link href="/admin/css/animate.css" rel="stylesheet">
+    <link href="/admin/css/style.css" rel="stylesheet">
     <!-- Data Tables -->
-    <link href="css/plugins/dataTables/dataTables.bootstrap.css" rel="stylesheet">
-    <link href="css/plugins/dataTables/dataTables.responsive.css" rel="stylesheet">
-    <link href="css/plugins/dataTables/dataTables.tableTools.min.css" rel="stylesheet">
+    <link href="/admin/css/plugins/dataTables/dataTables.bootstrap.css" rel="stylesheet">
+    <link href="/admin/css/plugins/dataTables/dataTables.responsive.css" rel="stylesheet">
+    <link href="/admin/css/plugins/dataTables/dataTables.tableTools.min.css" rel="stylesheet">
 
-    <link href="css/animate.css" rel="stylesheet">
-    <link href="css/style.css" rel="stylesheet">
-    <script src="js/jquery-2.1.1.js"></script>
-    <script src="js/bootstrap.min.js"></script>
-    <script src="js/fileinput.min.js"></script>
+    <link href="/admin/css/animate.css" rel="stylesheet">
+    <link href="/admin/css/style.css" rel="stylesheet">
+    <script src="/admin/js/jquery-2.1.1.js"></script>
+    <script src="/admin/js/bootstrap.min.js"></script>
 </head>
 
 <body>
@@ -53,25 +52,25 @@
                         </div> -->
                     </li>
                     <li class="active">
-                        <a href="index.php"><i class="fa fa-th-large"></i> <span class="nav-label">Trang Chủ</span></span></a>
+                        <a href="/admin/index.php"><i class="fa fa-th-large"></i> <span class="nav-label">Trang Chủ</span></span></a>
                     </li>
                     <li>
-                        <a href="thanh-vien.php"><i class="fa fa-diamond"></i> <span class="nav-label">Thành Viên</span> </span></a>
+                        <a href="/admin/thanh-vien.php"><i class="fa fa-diamond"></i> <span class="nav-label">Thành Viên</span> </span></a>
                     </li>
                     <li>
-                        <a href="nhan-vien.php"><i class="fa fa-bar-chart-o"></i> <span class="nav-label">Nhân Viên</span></span></a>
+                        <a href="/admin/nhan-vien.php"><i class="fa fa-bar-chart-o"></i> <span class="nav-label">Nhân Viên</span></span></a>
                     </li>
                     <li>
                         <a href=""><i class="fa fa-envelope"></i> <span class="nav-label">Tin Nhắn </span></a>
                     </li>
                     <li>
-                        <a href="danh-muc-sp.php"><i class="fa fa-flask"></i> <span class="nav-label">Danh Mục Sản Phẩm</span> </a>
+                        <a href="/admin/danh-muc-sp.php"><i class="fa fa-flask"></i> <span class="nav-label">Danh Mục Sản Phẩm</span> </a>
                     </li>
                     <li>
-                        <a href="san-pham.php"><i class="fa fa-edit"></i> <span class="nav-label">Sản Phẩm</span></a>
+                        <a href="/admin/san-pham.php"><i class="fa fa-edit"></i> <span class="nav-label">Sản Phẩm</span></a>
                     </li>
                     <li>
-                        <a href="#"><i class="fa fa-desktop"></i> <span class="nav-label">DơnĐặt Hàng</span></span></a>
+                        <a href="#"><i class="fa fa-desktop"></i> <span class="nav-label">Dơn Đặt Hàng</span></span></a>
                     </li>
                     <li>
                         <a href="#"><i class="fa fa-files-o"></i> <span class="nav-label">Đánh Giá Sản Phẩm</span><span class="fa arrow"></span></a>

@@ -14,7 +14,6 @@
                         <li>
                             <a href="index.php">Trang chủ</a>
                         </li>
-
                         <li class="active">
                             <strong>Danh mục sản phẩm</strong>
                         </li>
@@ -32,7 +31,7 @@
 
                         <div class="ibox-content">
                         <div class="">
-                            <a  href="<?php echo  $url_admin; ?>pages/them-danh-muc.php" class="btn btn-primary "> Thêm Danh Mục Sản Phẩm</a>
+                            <a  href="/admin/pages/them-danh-muc.php" class="btn btn-primary "> Thêm Danh Mục Sản Phẩm</a>
                         </div>
                         <table class="table table-striped table-bordered table-hover " id="editable" >
                             <thead>
@@ -55,7 +54,7 @@
                                     <th><?php echo $dm['id']; ?></th>
                                     <th><?php echo $dm['TenDanhMuc']; ?></th>
                                     <th><?php echo $dm['MoTa']; ?></th>
-                                    <th><a href="" class="btn btn-success">Sửa</a>  <a href="" class="btn btn-danger">Xóa</a></th>
+                                    <th><a href="/admin/pages/sua-danh-muc.php?id=<?=$dm['id']?>" class="btn btn-success">Sửa</a>  <a href="/admin/pages/xoa-dm.php?id=<?=$dm['id']?>" class="btn btn-danger" onclick="return confirm('Bạn có chắn chắn muốn xóa danh mục này?');">Xóa</a></th>
                                 </tr>
                                 
                             <?php 

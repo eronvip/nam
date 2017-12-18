@@ -23,11 +23,18 @@ session_start();
     <script src="js/html5shiv.js"></script>
     <script src="js/respond.min.js"></script>
     <![endif]-->       
-    <link rel="shortcut icon" href="/images/ico/favicon.ico">
+    <link rel="shortcut icon" href="../images/home/logo.png">
     <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/images/ico/apple-touch-icon-144-precomposed.png">
     <link rel="apple-touch-icon-precomposed" sizes="114x114" href="i/mages/ico/apple-touch-icon-114-precomposed.png">
     <link rel="apple-touch-icon-precomposed" sizes="72x72" href="/images/ico/apple-touch-icon-72-precomposed.png">
     <link rel="apple-touch-icon-precomposed" href="/images/ico/apple-touch-icon-57-precomposed.png">
+    <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+	<script>
+	  (adsbygoogle = window.adsbygoogle || []).push({
+	    google_ad_client: "ca-pub-5509766063416680",
+	    enable_page_level_ads: true
+	  });
+	</script>
 </head><!--/head-->
 
 <body>
@@ -70,14 +77,12 @@ session_start();
 					<div class="col-sm-8">
 						<div class="shop-menu pull-right" style="margin: 15px;">
 							<ul class="nav navbar-nav">
-								<li>
-									<a href="../pages/tai-khoan.php"><i class="fa fa-user"></i> Tài Khoản</a>
-								</li>
+								
 								<li>
 									<a href="checkout.html"><i class="fa fa-crosshairs"></i> Thanh Toán</a>
 								</li>
 								<li>
-									<a href="cart.html"><i class="fa fa-shopping-cart"></i> Giỏ Hàng</a>
+									<a href="/pages/gio-hang.php"><i class="fa fa-shopping-cart"></i> Giỏ Hàng</a>
 								</li>
 								<?php 
 									if(isset($_SESSION['login'])) {
@@ -90,9 +95,9 @@ session_start();
 										<ul class="nav navbar-nav collapse navbar-collapse">
 											<li class="dropdown"><a href="#"><i class="fa fa-user"></i> Xin Chào: <b><?=$user['TenThanhVien'];?></b></a>
 			                                    <ul role="menu" class="sub-menu">
-			                                        <li><a href="pages/thong-tin-tai-khoan.php">Thông tin tài khoản</a></li>
+			                                        <li><a href="/pages/thong-tin-tai-khoan.php">Thông tin tài khoản</a></li>
 													<li><a href="">Lịch sử mua hàng</a></li> 
-													<li><a href="">Đăng xuất</a></li> 
+													<li><a href="../pages/dang-xuat.php?dx=1">Đăng xuất</a></li> 
 			                                    </ul>
 			                                </li> 
 											
@@ -106,6 +111,9 @@ session_start();
 										<a href="" data-toggle="modal" data-target=".bs-example-modal-lg">
 											<i class="fa fa-lock"></i> Đăng Nhập
 										</a>
+									</li>
+									<li>
+										<a href="/pages/tai-khoan.php"><i class="fa fa-user"></i> Đăng Ký</a>
 									</li>
 								<?php 
 									}
@@ -159,14 +167,13 @@ session_start();
                                 </li> 
 								<li class="dropdown"><a href="#">Tin Tức</a>
                                 </li> 
-								<li><a href="404.html">404</a></li>
 								<li><a href="contact-us.html">Liên Hệ</a></li>
 							</ul>
 						</div>
 					</div>
-					<div class="col-sm-3">
+					<div class="col-sm-3 ">
 						<div class="search_box pull-right">
-							<input type="text" placeholder="Tìm kiếm sản phẩm"/>
+							<input class="form-control" type="text" placeholder="Tìm kiếm sản phẩm"/>
 						</div>
 					</div>
 				</div>

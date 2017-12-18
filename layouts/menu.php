@@ -12,11 +12,14 @@
 										$qr_laydm = mysqli_query($ketnoi, $laydm);
 
 										while($dm = mysqli_fetch_array($qr_laydm)){
-
+											$id = $dm['id'];
+											$laydm = "SELECT * FROM san_pham WHERE DanhMuc='".$id."'";
+											$qr = mysqli_query($ketnoi, $laydm);
+											$sl = mysqli_num_rows($qr);
 									 ?>
 									<li>
 										<a href="#"> 
-											<span class="pull-right">(50)</span>
+											<span class="pull-right">(<?=$sl?>)</span>
 											<?php echo $dm['TenDanhMuc']; ?>
 										</a>
 									</li>

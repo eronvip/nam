@@ -86,7 +86,7 @@
                                             echo  $dm1['TenDanhMuc'];
                                          ?>
                                     </td>
-                                    <td><a class="btn btn-success" href="">Sửa</a>  <a class="btn btn-danger" href="">Xóa</a></td>
+                                    <td><a class="btn btn-success" href="/admin/pages/sua-san-pham.php?id=<?=$sp['id']?>">Sửa</a>  <a class="btn btn-danger" href="">Xóa</a></td>
                                 </tr>
                                 <?php 
                                     }

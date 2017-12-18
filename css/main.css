@@ -256,15 +256,15 @@ a#scrollUp i{
   border: medium none;
   color: #B2B2B2;
   font-family: 'roboto';
-  font-size: 12px;
+  font-size: 14px;
   font-weight: 300;
   height: 35px;
   outline: medium none;
   padding-left: 10px;
-  width: 155px;
+  width: 200px;
   background-image: url(../images/home/searchicon.png);
   background-repeat: no-repeat;
-  background-position: 130px;
+  background-position: 175px;
 }
 
 
@@ -2542,4 +2542,9 @@ a.btn.btn-success.pull-right.dathang {
 }
 .header-middle {
   height: 70px !important;
+}
+.thongtin_tk {
+    margin-left: 26px;
+    font-size: 17px;
+    margin-bottom: 50px;
 }

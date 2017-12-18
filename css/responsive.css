@@ -147,6 +147,7 @@
 
 .shop-menu.pull-right{
 	float: none !important;
+	width: 320px;
 }
 
 .shop-menu .nav.navbar-nav{
@@ -220,7 +221,7 @@ ul.sub-menu{
 }
 
 .header-bottom .col-sm-3 {
-	display: inline-block;
+	display: none;
 	position: absolute;
 	left: 0;
 	top: 38px;
@@ -312,6 +313,7 @@ ul.sub-menu{
 .header_top .col-sm-6:last-child{
 	display: block;
 	float: none;
+	margin-top: -18px;
 }
 
 .contactinfo .nav.nav-pills, .social-icons .nav.navbar-nav{
@@ -321,6 +323,8 @@ ul.sub-menu{
 .logo{
 	text-align: center;
 	width: 100%;
+	margin-bottom: -28px;
+    margin-top: -18px;
 }
 
 .shop-menu ul li {
@@ -522,6 +526,13 @@ ul.sub-menu{
 
 .product-information span span{
 	float: none;
+}
+.col-sm-8 {
+    margin-left: -36px;
+}
+img.girl.img-responsive {
+    height: auto !important;
+    width: auto !important;
 }
 
 }
