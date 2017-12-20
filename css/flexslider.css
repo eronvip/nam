@@ -82,11 +82,7 @@ html[xmlns] .slides {
 }
 /* Direction Nav */
 .flex-direction-nav {
-	position:absolute;
-	right:-3px;
-	top:-41px;
-	padding-bottom:20px;
-	opacity:0
+	display: none;
 }
 .flexslider:hover .flex-direction-nav {
 	opacity:1
@@ -156,12 +152,10 @@ html[xmlns] .slides {
 	width:100%
 }
 .flexslider-large .flex-direction-nav li .flex-next {
-	position:absolute;
-	right:10px
+	display: none;
 }
 .flexslider-large .flex-direction-nav li .flex-prev {
-	position:absolute;
-	left:10px
+	display: none;
 }
 /* Pause/Play */
 .flex-pauseplay a {
@@ -228,7 +222,9 @@ html[xmlns] .slides {
 .flex-control-thumbs img {
 	width:100%;
 	display:block;
+	padding-left: 8px;
 	opacity:.7;
+	max-height: 120px;
 	cursor:pointer
 }
 .flex-control-thumbs img:hover {

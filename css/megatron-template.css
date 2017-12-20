@@ -2594,10 +2594,12 @@ _:valid\0, .contacts-form input.form-control, .contacts-form textarea.form-contr
 	margin: 0 .2em
 }
 .price.old {
-	text-decoration: line-through
+	text-decoration: line-through;
+	font-size: 20px;
 }
 .price.new {
-	color: #ee3b27!important
+	color: #ee3b27!important;
+	font-size: 20px;
 }
 .btn-select {
 	position: relative;
@@ -3098,7 +3100,8 @@ _:valid\0, .contacts-form input.form-control, .contacts-form textarea.form-contr
 	text-align: center
 }
 .product-view .large-image img {
-	max-width: 100%
+	width: 400px;
+    	height: auto;	
 }
 .product-view .large-image.vertical {
 	position: relative;

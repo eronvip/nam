@@ -10,29 +10,30 @@
         <meta name="author" content="">
         <title>NN shop</title>
         <!-- CSS preloader -->
-        <link href="css/loader.css" rel="stylesheet">
+        <link href="/css/loader.css" rel="stylesheet">
         <!-- Bootstrap core CSS -->
-        <link href="css/bootstrap.min.css" rel="stylesheet">
+        <link href="/css/bootstrap.min.css" rel="stylesheet">
         <!-- Custom styles for this template -->
-        <link href="css/megatron-template.css" rel="stylesheet">
+        <link href="/css/megatron-template.css" rel="stylesheet">
         <!-- CSS modules -->
-        <link href="css/icomoon.css" rel="stylesheet">
-        <link href="css/fontello.css" rel="stylesheet">
-        <link href="css/flexslider.css" rel="stylesheet">
-        <link href="css/jcarousel.css" rel="stylesheet">
-        <link href="css/owl.carousel.css" rel="stylesheet">
-        <link href="css/owl.theme.css" rel="stylesheet">
-        <link href="css/cloudzoom.css" rel="stylesheet">
-        <link href="css/sfmenu.css" rel="stylesheet">
-        <link href="css/isotope.css" rel="stylesheet">
-        <link href="css/smoothness/jquery-ui-1.10.3.custom.min.css" rel="stylesheet">
-        <link href="css/jquery.fancybox.css" rel="stylesheet">
-        <link href="css/hoverfold.css" rel="stylesheet">
+        <link href="/css/icomoon.css" rel="stylesheet">
+        <link href="/css/fontello.css" rel="stylesheet">
+        <link href="/css/flexslider.css" rel="stylesheet">
+        <link href="/css/jcarousel.css" rel="stylesheet">
+        <link href="/css/owl.carousel.css" rel="stylesheet">
+        <link href="/css/owl.theme.css" rel="stylesheet">
+        <link href="/css/cloudzoom.css" rel="stylesheet">
+        <link href="/css/sfmenu.css" rel="stylesheet">
+        <link href="/css/isotope.css" rel="stylesheet">
+        <link href="/css/smoothness/jquery-ui-1.10.3.custom.min.css" rel="stylesheet">
+        <link href="/css/jquery.fancybox.css" rel="stylesheet">
+        <link href="/css/hoverfold.css" rel="stylesheet">
+        <script src="/js/jquery-1.10.2.min.js"></script>
     </head>
 <body class="responsive">
-    <div class="loader">
+    <!-- <div class="loader">
       <div class="bubblingG"> <span id="bubblingG_1"> </span> <span id="bubblingG_2"> </span> <span id="bubblingG_3"> </span> </div>
-    </div>
+    </div> -->
 <div id="outer">
   <div id="outer-canvas"> <!-- Navbar -->
     <header>
@@ -44,7 +45,7 @@
           <div class="container">
             <!-- Logo -->
             <div class="navbar-logo pull-left">
-                <a href="index.html">
+                <a href="/index.hphp">
                     <img src="images/header-logo.png" alt="">
                 </a>
             </div>
@@ -61,8 +62,8 @@
                       <li><a href="#">Yêu thích</a></li>
                       <li><a href="#">Thanh toán</a></li>
                       <li class="divider"></li>
-                      <li><a href="login.html">Đăng nhập</a></li>
-                      <li><a href="login.html">Đăng Ký</a></li>
+                      <li><a href="/dang-nhap.php">Đăng nhập</a></li>
+                      <li><a href="/dang-xuat.php">Đăng Ký</a></li>
                     </ul>
               </div>
 

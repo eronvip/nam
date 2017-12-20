@@ -16,7 +16,7 @@
              ?>
             <li>
                 <span class="name">
-                    <a href="listing.html"><?=$dm['TenDanhMuc']?></a>
+                    <a href="/danh-muc-sp.php?id=<?=$dm['id']?>"><?=$dm['TenDanhMuc']?></a>
                 </span>
             </li>
         <?php } ?>
