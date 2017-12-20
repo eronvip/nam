@@ -1,90 +1,83 @@
-<footer id="footer"><!--Footer-->
-		
-		
-		<div class="footer-widget">
-			<div class="container">
-				<div class="row">
-					<div class="col-sm-2">
-						<div class="single-widget">
-							<h2>Service</h2>
-							<ul class="nav nav-pills nav-stacked">
-								<li><a href="#">Online Help</a></li>
-								<li><a href="#">Contact Us</a></li>
-								<li><a href="#">Order Status</a></li>
-								<li><a href="#">Change Location</a></li>
-								<li><a href="#">FAQ’s</a></li>
-							</ul>
-						</div>
-					</div>
-					<div class="col-sm-2">
-						<div class="single-widget">
-							<h2>Quock Shop</h2>
-							<ul class="nav nav-pills nav-stacked">
-								<li><a href="#">T-Shirt</a></li>
-								<li><a href="#">Mens</a></li>
-								<li><a href="#">Womens</a></li>
-								<li><a href="#">Gift Cards</a></li>
-								<li><a href="#">Shoes</a></li>
-							</ul>
-						</div>
-					</div>
-					<div class="col-sm-2">
-						<div class="single-widget">
-							<h2>Policies</h2>
-							<ul class="nav nav-pills nav-stacked">
-								<li><a href="#">Terms of Use</a></li>
-								<li><a href="#">Privecy Policy</a></li>
-								<li><a href="#">Refund Policy</a></li>
-								<li><a href="#">Billing System</a></li>
-								<li><a href="#">Ticket System</a></li>
-							</ul>
-						</div>
-					</div>
-					<div class="col-sm-2">
-						<div class="single-widget">
-							<h2>About Shopper</h2>
-							<ul class="nav nav-pills nav-stacked">
-								<li><a href="#">Company Information</a></li>
-								<li><a href="#">Careers</a></li>
-								<li><a href="#">Store Location</a></li>
-								<li><a href="#">Affillate Program</a></li>
-								<li><a href="#">Copyright</a></li>
-							</ul>
-						</div>
-					</div>
-					<div class="col-sm-3 col-sm-offset-1">
-						<div class="single-widget">
-							<h2>About Shopper</h2>
-							<form action="#" class="searchform">
-								<input type="text" placeholder="Your email address" />
-								<button type="submit" class="btn btn-default"><i class="fa fa-arrow-circle-o-right"></i></button>
-								<p>Get the most recent updates from <br />our site and be updated your self...</p>
-							</form>
-						</div>
-					</div>
-					
-				</div>
-			</div>
-		</div>
-		
-		<div class="footer-bottom">
-			<div class="container">
-				<div class="row">
-					<p class="pull-left">Copyright © 2013 LongDuong</p>
-					<p class="pull-right">Designed by <span><a target="_blank" href="http://www.longnd.xyz">LongDuong</a></span></p>
-				</div>
-			</div>
-		</div>
-		
-	</footer><!--/Footer-->
-	
+<footer>
+  <section class="footer-navbar dark">
+    <div class="container content nopad-xs">
+      <div class="row">
+        <div class="col-sm-6 col-md-3 col-lg-3 collapsed-block">
+          <h3>Information<a class="expander visible-xs" href="#TabBlock-3">+</a></h3>
+          <div  class="tabBlock" id="TabBlock-3">
+            <ul class="menu">
+              <li><a href="about.html">About Us</a></li>
+              <li><a href="#">Shipping &amp; Returns</a></li>
+              <li><a href="#">Privacy Notice</a></li>
+              <li><a href="#">Conditions of Use</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-sm-6 col-md-3 col-lg-3 collapsed-block"> <h3><span class="attention"><span class="attention_icon"></span></span>Customer service<a class="expander visible-xs" href="#TabBlock-4">+</a></h3>
+          <div  class="tabBlock" id="TabBlock-4">
+            <ul class="menu">
+              <li><a href="#">Online support</a></li>
+              <li><a href="#">Help & FAQs</a></li>
+              <li><a href="#">Call Center</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="clearfix visible-sm"></div>
+        <div class="col-sm-6 col-md-3 col-lg-3 collapsed-block">
+          <h3>My account<a class="expander visible-xs" href="#TabBlock-5">+</a></h3>
+          <div  class="tabBlock" id="TabBlock-5">
+            <ul class="menu">
+              <li><a href="#">My Account</a></li>
+              <li><a href="#">Order history</a></li>
+              <li><a href="#">Advanced search</a></li>
+              <li><a href="#">Reviews</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-sm-6 col-md-3 col-lg-3 collapsed-block">
+          <h3>CUSTOM HTML BLOCK<a class="expander visible-xs" href="#TabBlock-6">+</a></h3>
+          <div  class="tabBlock" id="TabBlock-6">
+            <ul class="menu">
+              <li><span class="icon icon-house"></span> 7563 St. Vincent Place, Glasgow</li>
+              <li><span class="icon icon-phone-4"></span> 321321321, 321321321</li>
+              <li><span class="icon icon-envelop"></span> <a href="mailto:info@mydomain.com">info@mydomain.com</a></li>
+              <li><span class="icon icon-skype-2"></span> <a href="#">shop.test</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 
-  
-
-	<script src="/js/bootstrap.min.js"></script>
-	<script src="/js/jquery.scrollUp.min.js"></script>
-	<script src="/js/price-range.js"></script>
-    <script src="/js/jquery.prettyPhoto.js"></script>
-    <script src="/js/main.js"></script>
-</body>
+</footer>
+<div id="outer-overlay"></div>
+</div>
+</div>
+<!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+<!--[if lt IE 9]>
+<script src="js/html5shiv.js"></script>
+<script src="js/respond.min.js"></script>
+<![endif]-->
+<script src="/js/jquery-1.10.2.min.js"></script>
+<!-- //end Footer -->
+<script src="/js/jquery.easing.1.3.js"></script>
+<script src="/js/jquery-ui-1.10.3.custom.min.js"></script>
+<script src="/js/jquery.ui.touch-punch.min.js"></script>
+<script src="/js/jquery.mousewheel.min.js"></script>
+<script src="/js/bootstrap.min.js"></script>
+<script src="/js/jquery.flexslider.js"></script>
+<script src="/js/owl.carousel.js"></script>
+<script src="/js/jquery.jcarousel.min.js"></script>
+<script src="/js/cloudzoom.js"></script>
+<script src="/js/jquery.isotope.min.js"></script>
+<script src="/js/jquery.parallax.js"></script>
+<script src="/js/jquery.fancybox.js?v=2.1.5"></script>
+<script src="/js/jquery.inview.js"></script>
+<script src="/js/hoverIntent.js"></script>
+<script src="/js/superfish.js"></script>
+<script src="/js/supersubs.js"></script>
+<script src="/js/jquery.plugin.js"></script>
+<script src="/js/jquery.countdown.js"></script>
+<script src="/js/jquery.carouFredSel-6.2.1-packed.js"></script>
+<script src="/js/megatron.js"></script>
 </html>

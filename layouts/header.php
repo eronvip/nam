@@ -1,183 +1,159 @@
-<?php 
-session_start();
-	$url = "/";
-	//include('inc/ketnoi.php');
- ?>
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="">
-    <meta name="author" content="">
-    <title>NN Shop</title>
-    <link href="/css/bootstrap.min.css" rel="stylesheet">
-    <link href="/css/font-awesome.min.css" rel="stylesheet">
-    <link href="/css/prettyPhoto.css" rel="stylesheet">
-    <link href="/css/price-range.css" rel="stylesheet">
-    <link href="/css/animate.css" rel="stylesheet">
-	<link href="/css/main.css" rel="stylesheet">
-	<link href="/css/responsive.css" rel="stylesheet">
-	<script src="/js/jquery.js"></script>
-    <!--[if lt IE 9]>
-    <script src="js/html5shiv.js"></script>
-    <script src="js/respond.min.js"></script>
-    <![endif]-->       
-    <link rel="shortcut icon" href="../images/home/logo.png">
-    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/images/ico/apple-touch-icon-144-precomposed.png">
-    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="i/mages/ico/apple-touch-icon-114-precomposed.png">
-    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="/images/ico/apple-touch-icon-72-precomposed.png">
-    <link rel="apple-touch-icon-precomposed" href="/images/ico/apple-touch-icon-57-precomposed.png">
-    <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-	<script>
-	  (adsbygoogle = window.adsbygoogle || []).push({
-	    google_ad_client: "ca-pub-5509766063416680",
-	    enable_page_level_ads: true
-	  });
-	</script>
-</head><!--/head-->
+    <head>
+        <meta charset="utf-8">
+        <!--[if IE]>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <![endif]-->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="">
+        <meta name="author" content="">
+        <title>NN shop</title>
+        <!-- CSS preloader -->
+        <link href="css/loader.css" rel="stylesheet">
+        <!-- Bootstrap core CSS -->
+        <link href="css/bootstrap.min.css" rel="stylesheet">
+        <!-- Custom styles for this template -->
+        <link href="css/megatron-template.css" rel="stylesheet">
+        <!-- CSS modules -->
+        <link href="css/icomoon.css" rel="stylesheet">
+        <link href="css/fontello.css" rel="stylesheet">
+        <link href="css/flexslider.css" rel="stylesheet">
+        <link href="css/jcarousel.css" rel="stylesheet">
+        <link href="css/owl.carousel.css" rel="stylesheet">
+        <link href="css/owl.theme.css" rel="stylesheet">
+        <link href="css/cloudzoom.css" rel="stylesheet">
+        <link href="css/sfmenu.css" rel="stylesheet">
+        <link href="css/isotope.css" rel="stylesheet">
+        <link href="css/smoothness/jquery-ui-1.10.3.custom.min.css" rel="stylesheet">
+        <link href="css/jquery.fancybox.css" rel="stylesheet">
+        <link href="css/hoverfold.css" rel="stylesheet">
+    </head>
+<body class="responsive">
+    <div class="loader">
+      <div class="bubblingG"> <span id="bubblingG_1"> </span> <span id="bubblingG_2"> </span> <span id="bubblingG_3"> </span> </div>
+    </div>
+<div id="outer">
+  <div id="outer-canvas"> <!-- Navbar -->
+    <header>
+      <!-- Back to top -->
+      <div class="back-to-top"><span class="icon-arrow-up-4"></span></div>
+      <!-- //end Back to top -->
+      <section class="navbar">
+        <div class="background">
+          <div class="container">
+            <!-- Logo -->
+            <div class="navbar-logo pull-left">
+                <a href="index.html">
+                    <img src="images/header-logo.png" alt="">
+                </a>
+            </div>
+            <div class="clearfix visible-sm"></div>
+            <!-- //end Logo -->
+            <!-- Secondary menu -->
+            <div class="navbar-secondary-menu pull-right hidden-xs">
+               <div class="btn-group compact-hidden">
+                   <a href="#" class="btn btn-xs btn-default dropdown-toggle" data-toggle="dropdown">
+                        <span class="icon icon-vcard"></span> Tài Khoản <span class="caret"></span>
+                   </a>
+                    <ul class="dropdown-menu" role="menu">
+                      <li><a href="#">Thong tin tài khoản</a></li>
+                      <li><a href="#">Yêu thích</a></li>
+                      <li><a href="#">Thanh toán</a></li>
+                      <li class="divider"></li>
+                      <li><a href="login.html">Đăng nhập</a></li>
+                      <li><a href="login.html">Đăng Ký</a></li>
+                    </ul>
+              </div>
 
-<body>
-	<header id="header"><!--header-->
-		<div class="header_top"><!--header_top-->
-			<div class="container">
-				<div class="row">
-					<div class="col-sm-6">
-						<div class="contactinfo">
-							<ul class="nav nav-pills">
-								<li><a href="#"><i class="fa fa-phone"></i>0934 07 27 24</a></li>
-								<li><a href="#"><i class="fa fa-envelope"></i>ldc.longnd@gmail.com</a></li>
-							</ul>
-						</div>
-					</div>
-					<div class="col-sm-6">
-						<div class="social-icons pull-right">
-							<ul class="nav navbar-nav">
-								<li><a href="#"><i class="fa fa-facebook"></i></a></li>
-								<li><a href="#"><i class="fa fa-twitter"></i></a></li>
-								<li><a href="#"><i class="fa fa-linkedin"></i></a></li>
-								<li><a href="#"><i class="fa fa-google-plus"></i></a></li>
-							</ul>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div><!--/header_top-->
-		
-		<div class="header-middle"><!--header-middle-->
-			<div class="container">
-				<div class="row">
-					<div class="col-sm-4">
-						<div class="logo pull-left">
-							<a  href="../index.php">
-								<img style="height: 70px;" src="/images/home/logo.png" alt="" />
-							</a>
-						</div>
-					</div>
-					<div class="col-sm-8">
-						<div class="shop-menu pull-right" style="margin: 15px;">
-							<ul class="nav navbar-nav">
-								
-								<li>
-									<a href="checkout.html"><i class="fa fa-crosshairs"></i> Thanh Toán</a>
-								</li>
-								<li>
-									<a href="/pages/gio-hang.php"><i class="fa fa-shopping-cart"></i> Giỏ Hàng</a>
-								</li>
-								<?php 
-									if(isset($_SESSION['login'])) {
-										$ketnoi = mysqli_connect("localhost", "root", "", "nam");
-										mysqli_set_charset($ketnoi, "utf8");
-										$email = $_SESSION['login'];
-										$user = mysqli_fetch_array(mysqli_query($ketnoi, "SELECT * FROM thanh_vien WHERE Email='".$email."'"));
-									?>
-									<div class="mainmenu pull-left">
-										<ul class="nav navbar-nav collapse navbar-collapse">
-											<li class="dropdown"><a href="#"><i class="fa fa-user"></i> Xin Chào: <b><?=$user['TenThanhVien'];?></b></a>
-			                                    <ul role="menu" class="sub-menu">
-			                                        <li><a href="/pages/thong-tin-tai-khoan.php">Thông tin tài khoản</a></li>
-													<li><a href="">Lịch sử mua hàng</a></li> 
-													<li><a href="../pages/dang-xuat.php?dx=1">Đăng xuất</a></li> 
-			                                    </ul>
-			                                </li> 
-											
-										</ul>
-									</div>
-		
-									<?php
-									} else {
-								 ?>
-									<li>
-										<a href="" data-toggle="modal" data-target=".bs-example-modal-lg">
-											<i class="fa fa-lock"></i> Đăng Nhập
-										</a>
-									</li>
-									<li>
-										<a href="/pages/tai-khoan.php"><i class="fa fa-user"></i> Đăng Ký</a>
-									</li>
-								<?php 
-									}
-								 ?>
-								<div class="modal fade bs-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
-								  <div class="modal-dialog modal-lg">
-								    <div class="modal-content">
-								    	<div class="dangnhap">
-								    		<h2>Đăng Nhập</h2>
-											<form action="../pages/xuly/dang-nhap.php" method="POST">
-												<div class="form-group">
-													<span>Email:</span>
-													<input class="form-control" type="email" name="email" id="em" placeholder="Email đăng nhập">
-												</div>
-												<div class="form-group">
-													<span>Mật Khẩu:</span>
-													<input class="form-control" type="password" name="matkhau" id="mk" placeholder="Mật khẩu đăng nhập">
-												</div>
-												<div id="tb" class="text-danger" style="color: red; font-weight:bold;"></div>
-												<div>
-													<input type="checkbox" name="ghinhodangnhap"> Ghi nhớ đăng nhập
-													<a href="" style="float:right;">Quên mật khẩu</a>
-												</div>
-												<button id="dn" class="btn btn-info">Đăng Nhập</button>
-											</form>
-								    	</div>
-								    </div>
-								  </div>
-								</div>
-							</ul>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div><!--/header-middle-->
-	
-		<div class="header-bottom"><!--header-bottom-->
-			<div class="container">
-				<div class="row">
-					<div class="col-sm-9">
-						<div class="mainmenu pull-left">
-							<ul class="nav navbar-nav collapse navbar-collapse">
-								<li><a href="../index.php" class="active">Trang Chủ</a></li>
-								<li class="dropdown"><a href="#">Danh Mục<i class="fa fa-angle-down"></i></a>
-                                    <ul role="menu" class="sub-menu">
-                                        <li><a href="/pages/san-pham.php">Sản Phẩm</a></li>
-										<li><a href="/pages/thanh-toan.php">Thanh Toán</a></li> 
-										<li><a href="/pages/gio-hang.php">Giỏ hàng</a></li> 
-										<li><a href="login.html">Đăng Nhập</a></li> 
-                                    </ul>
-                                </li> 
-								<li class="dropdown"><a href="#">Tin Tức</a>
-                                </li> 
-								<li><a href="contact-us.html">Liên Hệ</a></li>
-							</ul>
-						</div>
-					</div>
-					<div class="col-sm-3 ">
-						<div class="search_box pull-right">
-							<input class="form-control" type="text" placeholder="Tìm kiếm sản phẩm"/>
-						</div>
-					</div>
-				</div>
-				<hr>
-			</div>
-		</div><!--/header-bottom-->
-	</header><!--/header-->
+               <div class="btn-group">
+                  <a href="#"  class="btn btn-xs btn-default dropdown-toggle" data-toggle="dropdown">
+                       <span class="compact-hidden">Giỏ Hàng - <strong>245 VNĐ</strong></span>
+                       <span class="icon-xcart-animate"><span class="box">3</span>
+                       <span class="handle"></span></span>
+                   </a>
+                    <div class="dropdown-menu pull-right shoppingcart-box" role="menu"> Sản Phẩm Hiện có
+                       <ul class="list">
+                        <li class="item"> <a href="product_default.html" class="preview-image"><img class="preview" src="images/products/product-07-small.jpg" alt=""></a>
+                          <div class="description"> <a href="#">Mauris et ligula quis</a> <strong class="price">1 x $44.95</strong> </div>
+                        </li>
+                       </ul>
+                       <div class="total">Tổng tiền: <strong>$44.95</strong></div>
+                       <a href="#" class="btn btn-mega">Thanh Toán</a>
+                       <div class="view-link"><a href="shopping_cart.html">Vào Giỏ hàng </a></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Search -->
+            <form class="navbar-search form-inline hidden-xs pull-right" role="form">
+              <div class="form-group">
+                <button type="submit" class="button"><span class="icon-search-2"></span></button>
+                <input type="text" class="form-control" value="Tìm kiếm" onblur="if (this.value == '') {this.value = 'Tìm kiếm';}" onfocus="if(this.value == 'Tìm kiếm') {this.value = '';}">
+              </div>
+            </form>
+            <!-- //end Search -->
+            <!-- Main menu -->
+            <dl class="navbar-main-menu hidden-xs">
+                <dt class="item">
+                  <ul class="sf-menu">
+                    <li>
+                        <a href="index.html" class="btn-main">
+                            <span class="icon icon-home"></span>
+                        </a>
+                    </li>
+                  </ul>
+                </dt>
+                <dt class="item">
+                  <ul class="sf-menu">
+                    <li><a href="san-pham.php">Sản Phẩm</a></li>
+                  </ul>
+                </dt>
+                <dd></dd>
+                <dt class="item">
+                  <ul class="sf-menu">
+                    <li> <a href="https://Lazada.vn"> Sản phẩm liên kết Lazada.vn </a></li>
+                  </ul>
+                </dt>
+              <dt class="item">
+                <ul class="sf-menu">
+                  <li> <a href="https://sendo.vn"> Sản phẩm liên kết Sendo.vn </a></li>
+                </ul>
+              </dt>
+              <dt class="item">
+                <ul class="sf-menu">
+                  <li> <a href="blog.html"> Blog </a>
+                    <ul>
+                      <li><a href="blog_posts_table_view.html"> Table View </a> </li>
+                      <li> <a href="blog_single_post.html"> Single Post </a> </li>
+                    </ul>
+                  </li>
+                </ul>
+              </dt>
+              <dd></dd>
+              <dt class="item">
+                  <li><a href="contacts.html" class="btn-main line">Liên hệ</a> </li>
+              </dt>
+              <dd></dd>
+            </dl>
+            <!-- //end Main menu -->
+          </div>
+        </div>
+
+        <div class="navbar-switcher-container">
+          <div class="navbar-switcher"> <span class="i-inactive"><img src="images/logo-1.png" width="35" height="35" alt=""></span> <span class="i-active icon-cancel-3"></span> </div>
+        </div>
+        <!-- //end Navbar switcher -->
+
+      </section>
+
+      <!-- Navbar height -->
+      <div class="navbar-height-inner"></div>
+      <!-- Navbar height -->
+
+      <!-- Navbar height -->
+      <div class="navbar-height"></div>
+      <!-- Navbar height -->
+
+    </header>
+    <!-- //end Navbar -->

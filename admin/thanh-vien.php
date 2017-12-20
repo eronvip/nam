@@ -1,4 +1,5 @@
 <?php
+    session_start();
     include('layout/header.php');
     include('../inc/ketnoi.php');
         if(!isset($_SESSION['quantri'])) {
@@ -11,7 +12,6 @@
                         <li>
                             <a href="index.php">Trang chủ</a>
                         </li>
-
                         <li class="active">
                             <strong>Danh sách thành viên</strong>
                         </li>
@@ -34,13 +34,12 @@
                         <table class="table table-striped table-bordered table-hover " id="editable" >
                             <thead>
                                 <tr>
-                                    <th>Tên Đăng Nhập</th>
+                                    <th>Mã Thành Viên</th>
                                     <th>Họ Tên</th>
-                                    <th>Ngày Sinh</th>
-                                    <th>Giới Tình</th>
-                                    <th>Địa Chỉ</th>
-                                    <th>Điện Thoại</th>
                                     <th>Email</th>
+                                    <th>Số Điện Thoại</th>
+                                    <th>Ngày Sinh</th>
+                                    <th>Giới Tính</th>
                                     <th>Sửa / Xóa</th>
                                 </tr>
                             </thead>
@@ -48,16 +47,13 @@
                                 <?php 
                                     $laythanhvien = "SELECT * FROM thanh_vien";
                                     $truyvan_tv = mysqli_query($ketnoi, $laythanhvien);
-
                                     while($tv = mysqli_fetch_array($truyvan_tv)) {
-
                                  ?>
                                 <tr class="gradeX">
-                                    <td>Trident</td>
-                                    <td>a</td>
+                                    <td><?=$tv['id']?></td>
+                                    <td><?=$tv['TenThanhVien']?></td>
                                     <td>Win 95+</td>
                                     <td>4</td>
-                                    <td>X</td>
                                     <td>X</td>
                                     <td>X</td>
                                     <td><a href="">Sửa</a> / <a href="">Xóa</a></td>
