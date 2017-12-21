@@ -1,3 +1,7 @@
+<?php 
+  session_start();
+  include('inc/ketnoi.php');
+ ?>
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -28,6 +32,7 @@
         <link href="/css/smoothness/jquery-ui-1.10.3.custom.min.css" rel="stylesheet">
         <link href="/css/jquery.fancybox.css" rel="stylesheet">
         <link href="/css/hoverfold.css" rel="stylesheet">
+        <link rel="stylesheet" type="text/css" href="/css/main.css">
         <script src="/js/jquery-1.10.2.min.js"></script>
     </head>
 <body class="responsive">
@@ -45,7 +50,7 @@
           <div class="container">
             <!-- Logo -->
             <div class="navbar-logo pull-left">
-                <a href="/index.hphp">
+                <a href="/index.php">
                     <img src="images/header-logo.png" alt="">
                 </a>
             </div>
@@ -53,20 +58,32 @@
             <!-- //end Logo -->
             <!-- Secondary menu -->
             <div class="navbar-secondary-menu pull-right hidden-xs">
+            <?php 
+                if(!isset($_SESSION['user'])) {
+             ?>
+              <div class="btn-group compact-hidden">
+                  <a href="/dang-nhap.php"><span class="icon icon-vcard"></span> Đăng Nhập / Đăng Ký</a>
+              </div>
+              <?php 
+                } else {
+                  $email = $_SESSION['user'];
+                  $user = mysqli_fetch_array(mysqli_query($ketnoi, "SELECT * FROM thanh_vien WHERE Email='".$email."'"));
+               ?>
                <div class="btn-group compact-hidden">
                    <a href="#" class="btn btn-xs btn-default dropdown-toggle" data-toggle="dropdown">
-                        <span class="icon icon-vcard"></span> Tài Khoản <span class="caret"></span>
+                        <span class="icon icon-vcard"></span> Xin Chào: <b><?=$user['TenThanhVien']?></b> <span class="caret"></span>
                    </a>
                     <ul class="dropdown-menu" role="menu">
-                      <li><a href="#">Thong tin tài khoản</a></li>
-                      <li><a href="#">Yêu thích</a></li>
+                      <li><a href="/thong-tin-tk.php">Thông tin tài khoản</a></li>
+                      <li><a href="#">Lịch sử mua hàng</a></li>
                       <li><a href="#">Thanh toán</a></li>
                       <li class="divider"></li>
-                      <li><a href="/dang-nhap.php">Đăng nhập</a></li>
-                      <li><a href="/dang-xuat.php">Đăng Ký</a></li>
+                      <li><a href="/pages/logout.php?dx=1">Đăng xuất</a></li>
                     </ul>
               </div>
-
+            <?php 
+              }
+             ?>
                <div class="btn-group">
                   <a href="#"  class="btn btn-xs btn-default dropdown-toggle" data-toggle="dropdown">
                        <span class="compact-hidden">Giỏ Hàng - <strong>245 VNĐ</strong></span>

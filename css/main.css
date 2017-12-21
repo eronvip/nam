@@ -1,0 +1,15 @@
+#thongbao, #thongbao_d{
+    color: red;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+form#fr-doimatkhau input, form#fr-doithongtin input, form#fr-doithongtin select {
+    width: 100%;
+}
+form#fr-doimatkhau, form#fr-doithongtin {
+	padding: 30px;
+}
+form#fr-doimatkhau span, form#fr-doithongtin span {
+    font-weight: bold;
+}
