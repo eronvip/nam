@@ -97,8 +97,8 @@
                         </li>
                        </ul>
                        <div class="total">Tổng tiền: <strong>$44.95</strong></div>
-                       <a href="#" class="btn btn-mega">Thanh Toán</a>
-                       <div class="view-link"><a href="shopping_cart.html">Vào Giỏ hàng </a></div>
+                       <a href="/dat-hang.php" class="btn btn-mega">Thanh Toán</a>
+                       <div class="view-link"><a href="/gio-hang.php">Vào Giỏ hàng </a></div>
                     </div>
                 </div>
             </div>

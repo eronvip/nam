@@ -67,7 +67,7 @@
 
                 <div class="product-preview">
                     <div class="preview animate scale animated">
-                        <a href="product_default.html" class="preview-image">
+                        <a href="/chi-tiet-sp.php?id=<?=$cot['id']?>" class="preview-image">
                             <img class="img-responsive animate scale animated" src="/images/products/<?=$cot['Anh']?>" width="270" height="328" alt="">
                         </a>
                         <ul class="product-controls-list right hide-right">
@@ -79,12 +79,12 @@
                             <li><a href="#" class="cart"><span class="icon-basket"></span></a>
                             </li>
                         </ul>
-                        <a href="product_default.html" class="quick-view">
+                        <a href="/chi-tiet-sp.php?id=<?=$cot['id']?>" class="quick-view">
                             <b>Xem Nhanh</b>
                         </a>
                     </div>
                         <h3 class="title">
-                            <a href="product_default.html" class="preview-image"><?=$cot['TenSanPham']?></a>
+                            <a href="/chi-tiet-sp.php?id=<?=$cot['id']?>" class="preview-image"><?=$cot['TenSanPham']?></a>
                         </h3>
                         <span class="price old"><?=number_format($cot['DonGia'])?>đ</span>
                         <span class="price new"><?=number_format($cot['Gia_Giam'])?>đ</span>

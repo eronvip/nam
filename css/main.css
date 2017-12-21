@@ -13,3 +13,6 @@ form#fr-doimatkhau, form#fr-doithongtin {
 form#fr-doimatkhau span, form#fr-doithongtin span {
     font-weight: bold;
 }
+.jcarousel-skin-previews .jcarousel-clip-vertical {
+	height: 480px !important; 
+}

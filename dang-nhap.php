@@ -1,5 +1,4 @@
 <?php
-    session_start();
     include('layouts/header.php');
     include('inc/ketnoi.php');
 ?>

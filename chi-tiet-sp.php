@@ -98,7 +98,7 @@
               <div class="panel">
                 <div class="panel-heading"> <a data-toggle="collapse" data-parent="#product-accordion" href="#product-shipping" class="collapsed"> <span class="arrow-down icon-arrow-down-4"></span> <span class="arrow-up icon-arrow-up-4"></span> Shipping &amp; Returns </a> </div>
                 <div id="product-shipping" class="panel-collapse collapse">
-                  <div class="panel-body"> Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS. </div>
+                  <div class="panel-body"> ... </div>
                 </div>
               </div>
             </div> 
@@ -112,11 +112,26 @@
           <h3>Sản phẩm liê quan</h3>
           <div class="products-widget jcarousel-skin-previews vertical">
             <ul class="slides">
-              <li>
-                <div class="product"> <a href="product_default.html" class="preview-image"><img class="img-responsive product_activ" src="images/products/product-07-small.jpg" alt="" ></a>
-                  <p class="name"><a href="product_default.html" class="preview-image">Raglan Sleeve Tee Maison Scotch</a></p>
-                  <span class="rating"> </span> <span class="price">$44.95</span> </div>
-              </li>
+              
+                <?php 
+                  $laysplienquan = mysqli_query($ketnoi, "SELECT * FROM san_pham WHERE DanhMuc='".$sp['DanhMuc']."' LIMIT 7");
+                  while($splq = mysqli_fetch_array($laysplienquan)) {
+
+                 ?>
+                 <li>
+                <div class="product"> 
+                  <a href="/chi-tiet-sp.php?id=<?=$splq['id']?>" class="preview-image">
+                    <img class="img-responsive product_activ" src="/images/products/<?=$splq['Anh']?>"" alt="" >
+                  </a>
+                  <p class="name">
+                    <a href="/chi-tiet-sp.php?id=<?=$splq['id']?>" class="preview-image"><?=$splq['TenSanPham']?></a>
+                  </p>
+                  <span class="price"><?=number_format($splq['DonGia'])?> đ</span> 
+                </div>
+                </li>
+                <?php } ?>
+
+              
               
             </ul>
           </div>
