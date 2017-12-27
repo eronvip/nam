@@ -1,3 +1,25 @@
+<?php
+    include('function/cart.php');
+    include('function/product.php');
+    include('inc/ketnoi.php');
+
+    $sv = new Cart();
+    $sv_sp = new Product();
+    $number_cart = 0;
+    $price_total = 0;
+    $list_cart = [];
+    if (!empty($_POST)) {
+        $sv->addToCart($_POST);
+    }
+    if (isset($_SESSION['CART'])) {
+        $number_cart = count($_SESSION['CART']);
+        for ($i = 0; $i < $number_cart; $i++) {
+            $sp = $sv_sp->getProductbyId($sv->getIdSPbySession($_SESSION['CART'][$i],'id_sp'), $ketnoi);
+            $price_total += $sv->getIdSPbySession($_SESSION['CART'][$i],'number') * $sp['Gia_Giam'];
+            array_push($list_cart, $sp);
+        }
+    }
+?>
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -69,17 +91,23 @@
 
                <div class="btn-group">
                   <a href="#"  class="btn btn-xs btn-default dropdown-toggle" data-toggle="dropdown">
-                       <span class="compact-hidden">Giỏ Hàng - <strong>245 VNĐ</strong></span>
-                       <span class="icon-xcart-animate"><span class="box">3</span>
+                       <span class="compact-hidden">Giỏ Hàng - <strong><?= number_format($price_total) ?> VNĐ</strong></span>
+                       <span class="icon-xcart-animate"><span class="box"><?= $number_cart; ?></span>
                        <span class="handle"></span></span>
                    </a>
                     <div class="dropdown-menu pull-right shoppingcart-box" role="menu"> Sản Phẩm Hiện có
                        <ul class="list">
-                        <li class="item"> <a href="product_default.html" class="preview-image"><img class="preview" src="images/products/product-07-small.jpg" alt=""></a>
-                          <div class="description"> <a href="#">Mauris et ligula quis</a> <strong class="price">1 x $44.95</strong> </div>
-                        </li>
+                           <?php
+                            for($i = 0; $i < $number_cart; $i++){
+                           ?>
+                            <li class="item"> <a href="product_default.html" class="preview-image"><img class="preview" src="/images/products/<?= $list_cart[$i]['Anh']?>" alt=""></a>
+                              <div class="description"> <a href="#"><?= $list_cart[$i]['TenSanPham']?></a> <strong class="price"><?= $sv->getIdSPbySession($_SESSION['CART'][$i],'number');?> x <?= number_format($list_cart[$i]['DonGia']) ?>đ</strong> </div>
+                            </li>
+                           <?php
+                           }
+                           ?>
                        </ul>
-                       <div class="total">Tổng tiền: <strong>$44.95</strong></div>
+                       <div class="total">Tổng tiền: <strong><?= number_format($price_total) ?> VNĐ</strong></div>
                        <a href="#" class="btn btn-mega">Thanh Toán</a>
                        <div class="view-link"><a href="shopping_cart.html">Vào Giỏ hàng </a></div>
                     </div>
