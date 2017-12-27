@@ -3960,9 +3960,6 @@ _:valid\0, .contacts-form input.form-control, .contacts-form textarea.form-contr
 .owl-slider .owl-item .item img {
 	width: auto
 }
-.item img {
-    width: 100% !important;
-}
 .main-slider .owl-slider-outer {
 	margin-top: 0
 }
