@@ -120,15 +120,9 @@
                            }
                            ?>
                        </ul>
-<<<<<<< HEAD
                        <div class="total">Tổng tiền: <strong><?= number_format($price_total) ?> VNĐ</strong></div>
-                       <a href="#" class="btn btn-mega">Thanh Toán</a>
-                       <div class="view-link"><a href="shopping_cart.html">Vào Giỏ hàng </a></div>
-=======
-                       <div class="total">Tổng tiền: <strong>$44.95</strong></div>
                        <a href="/dat-hang.php" class="btn btn-mega">Thanh Toán</a>
                        <div class="view-link"><a href="/gio-hang.php">Vào Giỏ hàng </a></div>
->>>>>>> 1382fbc7fd097bf754efba06a899c50cb7ef49b7
                     </div>
                 </div>
             </div>
