@@ -123,22 +123,34 @@
                     </div>
                 </div>
                 <!-- //end Description -->
-
             </div>
 
             <!-- Related Products -->
+
             <section class="col-sm-12 col-md-3 col-lg-3 slider-products  module">
                 <h3>Sản phẩm liên quan</h3>
                 <div class="products-widget jcarousel-skin-previews vertical">
                     <ul class="slides">
-                        <li>
-                            <div class="product"><a href="product_default.html" class="preview-image"><img
-                                            class="img-responsive product_activ"
-                                            src="images/products/product-07-small.jpg" alt=""></a>
-                                <p class="name"><a href="product_default.html" class="preview-image">Raglan Sleeve Tee
-                                        Maison Scotch</a></p>
-                                <span class="rating"> </span> <span class="price">$44.95</span></div>
-                        </li>
+
+                        <?php
+                        $laysplienquan = mysqli_query($ketnoi, "SELECT * FROM san_pham WHERE DanhMuc='".$sp['DanhMuc']."' LIMIT 7");
+                        while($splq = mysqli_fetch_array($laysplienquan)) {
+
+                            ?>
+                            <li>
+                                <div class="product">
+                                    <a href="/chi-tiet-sp.php?id=<?=$splq['id']?>" class="preview-image">
+                                        <img class="img-responsive product_activ" src="/images/products/<?=$splq['Anh']?>"" alt="" >
+                                    </a>
+                                    <p class="name">
+                                        <a href="/chi-tiet-sp.php?id=<?=$splq['id']?>" class="preview-image"><?=$splq['TenSanPham']?></a>
+                                    </p>
+                                    <span class="price"><?=number_format($splq['DonGia'])?> đ</span>
+                                </div>
+                            </li>
+                        <?php } ?>
+
+
 
                     </ul>
                 </div>
@@ -177,7 +189,7 @@
                     <li>
                         <div class="product-preview">
                             <div class="preview animate scale"><a href="#"><img
-                                            src="images/products/product-03-small.jpg" alt=""></a> <a
+                                            src="/images/products/moc-chia-khoa-meo-hello-kitty-1m4G3-vCksf5_simg_d0daf0_800x1200_max.jpg" alt=""></a> <a
                                         href="_ajax_view-product.html" class="quick-view"> <span
                                             class="icon-zoom-in-2"></span> View </a></div>
                         </div>

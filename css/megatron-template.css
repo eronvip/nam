@@ -1189,7 +1189,7 @@ label {
 	position: absolute;
 	top: 0;
 	margin-bottom: 0;
-	z-index: 9990;
+	z-index: 100;
 	border: 0!important
 }
 .navbar .background {

@@ -2,12 +2,20 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="de42a06c-a1f5-4d28-b271-4303795bdcc1" name="Default" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/function/product.php" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/css/main.css" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/dang-ky.php" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/dat-hang.php" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/functions/connect.php" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/gio-hang.php" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/pages/logout.php" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/thong-tin-tk.php" />
       <change beforePath="$PROJECT_DIR$/.gitignore" afterPath="$PROJECT_DIR$/.gitignore" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change beforePath="$PROJECT_DIR$/chi-tiet-sp.php" afterPath="$PROJECT_DIR$/chi-tiet-sp.php" />
       <change beforePath="$PROJECT_DIR$/css/megatron-template.css" afterPath="$PROJECT_DIR$/css/megatron-template.css" />
+      <change beforePath="$PROJECT_DIR$/dang-nhap.php" afterPath="$PROJECT_DIR$/dang-nhap.php" />
       <change beforePath="$PROJECT_DIR$/layouts/header.php" afterPath="$PROJECT_DIR$/layouts/header.php" />
+      <change beforePath="$PROJECT_DIR$/san-pham.php" afterPath="$PROJECT_DIR$/san-pham.php" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -18,22 +26,32 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="chi-tiet-sp.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="chi-tiet-sp.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/chi-tiet-sp.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="48">
-              <caret line="3" column="34" lean-forward="false" selection-start-line="3" selection-start-column="34" selection-end-line="3" selection-end-column="34" />
-              <folding />
+            <state relative-caret-position="289">
+              <caret line="192" column="77" lean-forward="false" selection-start-line="192" selection-start-column="77" selection-end-line="192" selection-end-column="77" />
+              <folding>
+                <element signature="e#695#2199#0#HTML" expanded="false" />
+                <element signature="e#2212#6841#0#HTML" expanded="false" />
+                <element signature="e#2309#3046#0#HTML" expanded="false" />
+                <element signature="e#3437#4255#0#HTML" expanded="false" />
+                <element signature="e#4366#5143#0#HTML" expanded="false" />
+                <element signature="e#5169#6729#0#HTML" expanded="false" />
+                <element signature="e#6894#8281#0#HTML" expanded="false" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="header.php" pinned="false" current-in-tab="false">
+      <file leaf-file-name="header.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/layouts/header.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="170">
-              <caret line="10" column="25" lean-forward="true" selection-start-line="10" selection-start-column="25" selection-end-line="10" selection-end-column="25" />
-              <folding />
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding>
+                <marker date="1514348740327" expanded="true" signature="3588:3637" ph="SELECT * FRO... thanh_vien" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -73,8 +91,8 @@
       <file leaf-file-name="ketnoi.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/inc/ketnoi.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="17">
-              <caret line="1" column="51" lean-forward="false" selection-start-line="1" selection-start-column="51" selection-end-line="1" selection-end-column="51" />
+            <state relative-caret-position="153">
+              <caret line="9" column="6" lean-forward="false" selection-start-line="9" selection-start-column="6" selection-end-line="9" selection-end-column="6" />
               <folding />
             </state>
           </provider>
@@ -107,9 +125,10 @@
         <option value="$PROJECT_DIR$/layouts/footer.php" />
         <option value="$PROJECT_DIR$/css/megatron-template.css" />
         <option value="$PROJECT_DIR$/function/cart.php" />
+        <option value="$PROJECT_DIR$/.gitignore" />
+        <option value="$PROJECT_DIR$/chi-tiet-sp.php" />
         <option value="$PROJECT_DIR$/inc/ketnoi.php" />
         <option value="$PROJECT_DIR$/layouts/header.php" />
-        <option value="$PROJECT_DIR$/chi-tiet-sp.php" />
       </list>
     </option>
   </component>
@@ -302,12 +321,12 @@
       <workItem from="1513844417540" duration="10937000" />
       <workItem from="1514169231581" duration="9920000" />
       <workItem from="1514185049864" duration="849000" />
-      <workItem from="1514339568642" duration="5424000" />
+      <workItem from="1514339568642" duration="7031000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="27568000" />
+    <option name="totallyTimeSpent" value="29175000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="754" extended-state="6" />
@@ -322,7 +341,7 @@
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32847896" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.13691376" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -357,7 +376,15 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1258">
           <caret line="74" column="56" lean-forward="false" selection-start-line="74" selection-start-column="56" selection-end-line="74" selection-end-column="91" />
-          <folding />
+          <folding>
+            <element signature="e#695#2199#0#HTML" expanded="false" />
+            <element signature="e#2212#6841#0#HTML" expanded="false" />
+            <element signature="e#2309#3046#0#HTML" expanded="false" />
+            <element signature="e#3437#4255#0#HTML" expanded="false" />
+            <element signature="e#4366#5143#0#HTML" expanded="false" />
+            <element signature="e#5169#6729#0#HTML" expanded="false" />
+            <element signature="e#6894#8281#0#HTML" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -391,7 +418,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="442">
           <caret line="26" column="30" lean-forward="true" selection-start-line="26" selection-start-column="30" selection-end-line="26" selection-end-column="30" />
-          <folding />
+          <folding>
+            <marker date="1514348740327" expanded="true" signature="3588:3637" ph="SELECT * FRO... thanh_vien" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -399,7 +428,15 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1258">
           <caret line="74" column="56" lean-forward="false" selection-start-line="74" selection-start-column="56" selection-end-line="74" selection-end-column="91" />
-          <folding />
+          <folding>
+            <element signature="e#695#2199#0#HTML" expanded="false" />
+            <element signature="e#2212#6841#0#HTML" expanded="false" />
+            <element signature="e#2309#3046#0#HTML" expanded="false" />
+            <element signature="e#3437#4255#0#HTML" expanded="false" />
+            <element signature="e#4366#5143#0#HTML" expanded="false" />
+            <element signature="e#5169#6729#0#HTML" expanded="false" />
+            <element signature="e#6894#8281#0#HTML" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -433,7 +470,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="119">
           <caret line="7" column="35" lean-forward="true" selection-start-line="7" selection-start-column="35" selection-end-line="7" selection-end-column="35" />
-          <folding />
+          <folding>
+            <marker date="1514348740327" expanded="true" signature="3588:3637" ph="SELECT * FRO... thanh_vien" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -441,7 +480,15 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="170">
           <caret line="10" column="0" lean-forward="false" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="26" />
-          <folding />
+          <folding>
+            <element signature="e#695#2199#0#HTML" expanded="false" />
+            <element signature="e#2212#6841#0#HTML" expanded="false" />
+            <element signature="e#2309#3046#0#HTML" expanded="false" />
+            <element signature="e#3437#4255#0#HTML" expanded="false" />
+            <element signature="e#4366#5143#0#HTML" expanded="false" />
+            <element signature="e#5169#6729#0#HTML" expanded="false" />
+            <element signature="e#6894#8281#0#HTML" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -474,7 +521,15 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="255">
           <caret line="15" column="10" lean-forward="true" selection-start-line="15" selection-start-column="10" selection-end-line="15" selection-end-column="10" />
-          <folding />
+          <folding>
+            <element signature="e#695#2199#0#HTML" expanded="false" />
+            <element signature="e#2212#6841#0#HTML" expanded="false" />
+            <element signature="e#2309#3046#0#HTML" expanded="false" />
+            <element signature="e#3437#4255#0#HTML" expanded="false" />
+            <element signature="e#4366#5143#0#HTML" expanded="false" />
+            <element signature="e#5169#6729#0#HTML" expanded="false" />
+            <element signature="e#6894#8281#0#HTML" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -581,27 +636,45 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/inc/ketnoi.php">
+    <entry file="file://$PROJECT_DIR$/.gitignore">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="1" column="51" lean-forward="false" selection-start-line="1" selection-start-column="51" selection-end-line="1" selection-end-column="51" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/layouts/header.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="10" column="25" lean-forward="true" selection-start-line="10" selection-start-column="25" selection-end-line="10" selection-end-column="25" />
+        <state relative-caret-position="34">
+          <caret line="2" column="4" lean-forward="false" selection-start-line="2" selection-start-column="4" selection-end-line="2" selection-end-column="4" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/chi-tiet-sp.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="48">
-          <caret line="3" column="34" lean-forward="false" selection-start-line="3" selection-start-column="34" selection-end-line="3" selection-end-column="34" />
+        <state relative-caret-position="289">
+          <caret line="192" column="77" lean-forward="false" selection-start-line="192" selection-start-column="77" selection-end-line="192" selection-end-column="77" />
+          <folding>
+            <element signature="e#695#2199#0#HTML" expanded="false" />
+            <element signature="e#2212#6841#0#HTML" expanded="false" />
+            <element signature="e#2309#3046#0#HTML" expanded="false" />
+            <element signature="e#3437#4255#0#HTML" expanded="false" />
+            <element signature="e#4366#5143#0#HTML" expanded="false" />
+            <element signature="e#5169#6729#0#HTML" expanded="false" />
+            <element signature="e#6894#8281#0#HTML" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/inc/ketnoi.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="9" column="6" lean-forward="false" selection-start-line="9" selection-start-column="6" selection-end-line="9" selection-end-column="6" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/layouts/header.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <marker date="1514348740327" expanded="true" signature="3588:3637" ph="SELECT * FRO... thanh_vien" />
+          </folding>
         </state>
       </provider>
     </entry>
