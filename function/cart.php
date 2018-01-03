@@ -15,28 +15,23 @@
             date_default_timezone_set('Asia/Ho_Chi_Minh');
             $obj_cart->datetime_cart = date("Y-m-d H:i:s");
 
-            $arr_cart = [];
-            if (isset($_SESSION['CART']))
-                $arr_cart = array_merge($arr_cart, $_SESSION['CART']);
-            array_push($arr_cart, $obj_cart);
-            $_SESSION['CART'] = $arr_cart;
+            $objCartArray = [];
+            if (isset($_SESSION['CART'])) {
+                $objCartArray = json_decode($_SESSION['CART'], true);
+            }
+            $objCartArray[] = $obj_cart;
+            $_SESSION['CART'] = json_encode($objCartArray);
+
+            //$_SESSION['CART'] = array_map("unserialize", array_unique(array_map("serialize", $_SESSION['CART'])));
 
             //setcookie("CART_GUEST", json_encode($obj_cart), time() + (86400 * 30));
             //return "abc";
         }
-        public function getIdSPbySession($item, $_key){
-            foreach($item as $key=>$value)
-            {
-                if($key == $_key)
-                    return($value);
-            }
-        }
         public function hasProduct($id){
-            $arr_cart = [];
             if (isset($_SESSION['CART'])) {
-                $arr_cart = array_merge($arr_cart, $_SESSION['CART']);
+                $arr_cart = json_decode($_SESSION['CART'], true);
                 foreach ($arr_cart as $item) {
-                    if ($this->getIdSPbySession($item, 'id_sp') == $id)
+                    if ($item['id_sp'] == $id)
                         return true;
                 }
             }

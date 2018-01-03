@@ -1816,4 +1816,8 @@ $(window).load(function () {
             })
         }, 1E3)
     })
+    $("#list_cart .input-group.quantity-control input").on('change', function(){
+        var $price
+        $(this).val() * value.toFixed(2).replace(/(\d)(?=(\d\d\d)+(?!\d))/g, "$1,");
+    })
 });
